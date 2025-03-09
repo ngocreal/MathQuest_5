@@ -8,11 +8,14 @@ public class FallTrap : MonoBehaviour
     private Rigidbody2D rb;
     private bool daRoi = false;
     public Transform diemKhoiPhuc;
+
+    private Vector3 respawnPoint;
     // Start is called before the first frame update 
-  
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        respawnPoint = transform.position;
     }
    
     private void OnTriggerEnter2D(Collider2D collision)

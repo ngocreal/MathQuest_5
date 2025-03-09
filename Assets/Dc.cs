@@ -12,6 +12,9 @@ public class Dc : MonoBehaviour
     private bool duocPhepNhay;
     private bool nhayDoi;
 
+    private Vector3 respawnPoint;
+    public GameObject fallDetector;
+
     public Transform _duocPhepNhay;
     public LayerMask san;
 
@@ -20,7 +23,7 @@ public class Dc : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
+        respawnPoint = transform.position;
     }
 
     // Update is called once per frame
@@ -67,6 +70,16 @@ public class Dc : MonoBehaviour
             }
         }
 
+        fallDetector.transform.position = new Vector2(transform.position.x, fallDetector.transform.position.y);
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+
+        if (collision.tag == "FallDetector")
+        {
+            transform.position = respawnPoint;
+        }
+    }
+
 }
 
