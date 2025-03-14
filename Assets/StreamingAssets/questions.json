@@ -1,0 +1,20 @@
+    [
+    {
+        "id": 1,
+        "question": "5 + 3 = ?",
+        "answer": 8,
+        "difficulty": "easy"
+    },
+    {
+    "id": 2,
+        "question": "12 ÷ 4 = ?",
+        "answer": 3,
+        "difficulty": "medium"
+    },
+    {
+    "id": 3,
+        "question": "Nếu a = 3, b = 4 thì a² + b² = ?",
+        "answer": 25,
+        "difficulty": "hard"
+    }
+]
