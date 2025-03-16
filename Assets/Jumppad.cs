@@ -1,20 +1,29 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Jumppad : MonoBehaviour
 {
     public float doNay = 10f;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    private Animator anim;
+
     void Start()
     {
-        
+        anim = GetComponent<Animator>(); // Lấy Animator của Jumppad
     }
 
-    // Update is called once per frame
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.CompareTag("Player"))
+        if (collision.CompareTag("Player"))
         {
-            collision.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.up*doNay,ForceMode2D.Impulse);
+            collision.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.up * doNay, ForceMode2D.Impulse);
+            anim.SetTrigger("JumpPad"); // ✅ Bật animation JumpPad
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            anim.ResetTrigger("JumpPad"); // ✅ Tắt animation khi rời khỏi Jumppad
         }
     }
 }
