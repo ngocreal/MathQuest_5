@@ -649,11 +649,467 @@
         "difficulty": 2
     },
     {
-        "questionText": "",
-        "imagePath": "Image/c",
-        "correctAnswer": "",
+        "questionText": "Số 742,5 có phần nguyên gồm các chữ số:",
+        "imagePath": "",
+        "correctAnswer": "7; 4; 2",
+        "isMultipleChoice": true,
+        "choices": ["7; 4; 2", "7; 4; 5", "5; 4; 2", "7; 4; 2; 5"],
+        "difficulty": 2
+    },
+    {
+        "questionText": "Số 10,362 có phần thập phân gồm các chữ số:",
+        "imagePath": "",
+        "correctAnswer": "3; 6; 2",
+        "isMultipleChoice": true,
+        "choices": ["3; 6; 2", "3; 0; 2", "1; 6; 2", "0; 3; 2; 6"],
+        "difficulty": 2
+    },
+    {
+        "questionText": "Viết phân số thập phân 4/100 thành số thập phân:",
+        "imagePath": "",
+        "correctAnswer": "0,04",
         "isMultipleChoice": false,
         "choices": [],
+        "difficulty": 1
+    },
+    {
+        "questionText": "Viết phân số thập phân 228/100 thành số thập phân:",
+        "imagePath": "",
+        "correctAnswer": "2,28",
+        "isMultipleChoice": false,
+        "choices": [],
+        "difficulty": 1
+    },
+    {
+        "questionText": "Câu nào đúng?",
+        "imagePath": "",
+        "correctAnswer": "Chiều cao của một bạn là 1/45/100 m nghĩa là bạn đó cao 1,45 m.",
+        "isMultipleChoice": true,
+        "choices": ["Chiều cao của một bạn là 1/45/100 m nghĩa là bạn đó cao 1,45 m.", "Khối lượng của một con gà là 1 2/5 kg nghĩa là con gà đó cân nặng 1,2 kg"],
+        "difficulty": 2
+    },
+    {
+        "questionText": "3,5. Đọc là:",
+        "imagePath": "",
+        "correctAnswer": "Ba phẩy năm",
+        "isMultipleChoice": false,
+        "choices": [],
+        "difficulty": 1
+    },
+    {
+        "questionText": "125,92. Đọc là:",
+        "imagePath": "",
+        "correctAnswer": "Một trăm hai mươi lăm phẩy chín hai",
+        "isMultipleChoice": false,
+        "choices": [],
+        "difficulty": 1
+    },
+    {
+        "questionText": "Một trăm linh hai phẩy ba trăm bảy mươi. Viết là:",
+        "imagePath": "",
+        "correctAnswer": "102,370",
+        "isMultipleChoice": false,
+        "choices": [],
+        "difficulty": 1
+    },
+    {
+        "questionText": "Tám mươi mốt phẩy không trăm mười tám.",
+        "imagePath": "",
+        "correctAnswer": "81,018",
+        "isMultipleChoice": false,
+        "choices": [],
+        "difficulty": 1
+    },
+    {
+        "questionText": "2 đơn vị, 8 phần mười. Viết là:",
+        "imagePath": "",
+        "correctAnswer": "2,8",
+        "isMultipleChoice": false,
+        "choices": [],
+        "difficulty": 2
+    },
+    {
+        "questionText": "32 phần nghìn",
+        "imagePath": "",
+        "correctAnswer": "0,032",
+        "isMultipleChoice": false,
+        "choices": [],
+        "difficulty": 2
+    },
+    {
+        "questionText": "85 đơn vị, 677 phần nghìn",
+        "imagePath": "",
+        "correctAnswer": "85,677",
+        "isMultipleChoice": false,
+        "choices": [],
+        "difficulty": 2
+    },
+    {
+        "questionText": "320,839. Chữ số 8 thuộc hàng ...",
+        "imagePath": "",
+        "correctAnswer": "hàng phần mười",
+        "isMultipleChoice": true,
+        "choices": ["hàng phần mười", "hàng phần chục", "hàng phần nghìn", "hàng phần đơn vị"],
+        "difficulty": 2
+    },
+    {
+        "questionText": "34,012. Chữ số 4 thuộc hàng ...",
+        "imagePath": "",
+        "correctAnswer": "hàng đơn vị",
+        "isMultipleChoice": true,
+        "choices": ["hàng phần mười", "hàng phần chục", "hàng phần nghìn", "hàng phần đơn vị"],
+        "difficulty": 2
+    },
+    {
+        "questionText": "5,400. Thu gọn là ...",
+        "imagePath": "",
+        "correctAnswer": "5,4",
+        "isMultipleChoice": false,
+        "choices": [],
+        "difficulty": 1
+    },
+    {
+        "questionText": "100,0010. Thu gọn là ...",
+        "imagePath": "",
+        "correctAnswer": "100,001",
+        "isMultipleChoice": false,
+        "choices": [],
+        "difficulty": 2
+    },
+    {
+        "questionText": "Cặp số đo nào bằng nhau?",
+        "imagePath": "",
+        "correctAnswer": "20,700 kg; 20,70 kg",
+        "isMultipleChoice": true,
+        "choices": ["20,7 kg; 2,070 kg", "2,070 kg; 20,700 kg","20,700 kg; 20,70 kg", "2,070; 20,70"],
+        "difficulty": 2
+    },
+    {
+        "questionText": "Chọn >, <, = điền vào 9,75 .?. 12,4",
+        "imagePath": "",
+        "correctAnswer": "<",
+        "isMultipleChoice": true,
+        "choices": [">","<","=","><"],
+        "difficulty": 1
+    },
+    {
+        "questionText": "Chọn >, <, = điền vào 2,38 .?. 0,951",
+        "imagePath": "",
+        "correctAnswer": ">",
+        "isMultipleChoice": true,
+        "choices": [">","<","=","><"],
+        "difficulty": 1
+    },
+    {
+        "questionText": "Chọn >, <, = điền vào 8,91 .?. 08,910",
+        "imagePath": "",
+        "correctAnswer": "=",
+        "isMultipleChoice": true,
+        "choices": [">","<","=","><"],
+        "difficulty": 1
+    },
+    {
+        "questionText": "Số thập phân lớn hơn 3,4 nhưng bé hơn 3,5 là ...",
+        "imagePath": "",
+        "correctAnswer": "3,43",
+        "isMultipleChoice": true,
+        "choices": ["3,6", "3,2", "3,43", "3,49"],
+        "difficulty": 2
+    },
+    {
+        "questionText": "Làm tròn số thập phân 7,48 đến hàng đơn vị.",
+        "imagePath": "",
+        "correctAnswer": "7",
+        "isMultipleChoice": false,
+        "choices": [],
+        "difficulty": 2
+    },
+    {
+        "questionText": "Làm tròn số thập phân 5,448 đến hàng phần mười.",
+        "imagePath": "",
+        "correctAnswer": "5,4",
+        "isMultipleChoice": false,
+        "choices": [],
+        "difficulty": 2
+    },
+    {
+        "questionText": "Điểm số môn Tiếng Việt của Y Moan là 8,25. Làm tròn số này đến hàng đơn vị thì điểm số môn Tiếng Việt của Y Moan là:",
+        "imagePath": "",
+        "correctAnswer": "8",
+        "isMultipleChoice": true,
+        "choices": ["8","8,2","8,3","10"],
+        "difficulty": 2
+    },
+    {
+        "questionText": "Một con cá cân nặng 0,94 kg. Ta nói, con cá đó nặng khoảng:",
+        "imagePath": "",
+        "correctAnswer": "1 kg",
+        "isMultipleChoice": true,
+        "choices": ["100 kg","10 kg","1 kg","9 kg"],
+        "difficulty": 2
+    },
+    {
+        "questionText": "",
+        "imagePath": "Image/c28_dattinh_1",
+        "correctAnswer": "",
+        "isMultipleChoice": true,
+        "choices": ["a), d)","a), b)", "b), c)","c), d)"],
+        "difficulty": 2
+    },
+    {
+        "questionText": "Năm 2020, sản lượng xoài của nước ta khoảng 894,8 nghìn tấn, Năm 2021, sản lượng xoài tăng 104,8 nghìn tấn so với năm 2020. Hỏi cả hai năm, sản lượng xoài của nước ta khoảng bao nhiêu nghìn tấn?",
+        "imagePath": "",
+        "correctAnswer": "1894,4 nghìn tấn",
+        "isMultipleChoice": true,
+        "choices": ["1894,4 nghìn tấn", "1884,4 nghìn tấn", "1994,4 nghìn tấn", "1994,8 nghìn tấn"],
+        "difficulty": 2
+    },
+    {
+        "questionText": "5,64 – 1,47 = ?",
+        "imagePath": "",
+        "correctAnswer": "4,17",
+        "isMultipleChoice": false,
+        "choices": [],
+        "difficulty": 2
+    },
+    {
+        "questionText": "3,6 – 0,7 – 0,3 = 3,6 – (0,7 + .?.)",
+        "imagePath": "",
+        "correctAnswer": "0,3",
+        "isMultipleChoice": false,
+        "choices": [],
+        "difficulty": 2
+    },
+    {
+        "questionText": "Một cửa hàng có 16 tạ gạo. Buổi sáng, cửa hàng bán được 2,25 tạ gạo; buổi chiều bán được 1,25 tạ gạo. Hỏi cửa hàng còn lại bao nhiêu tạ gạo?",
+        "imagePath": "Image/c",
+        "correctAnswer": "12,5",
+        "isMultipleChoice": false,
+        "choices": [],
+        "difficulty": 2
+    },
+    {
+        "questionText": "71 m 6 dm dưới dạng số thập phân có đơn vị đo là mét. Viết là ... mét",
+        "imagePath": "",
+        "correctAnswer": "71,6",
+        "isMultipleChoice": false,
+        "choices": [],
+        "difficulty": 2
+    },
+    {
+        "questionText": "345 cm dưới dạng số thập phân có đơn vị đo là mét. Viết là ... mét",
+        "imagePath": "",
+        "correctAnswer": "3,45",
+        "isMultipleChoice": false,
+        "choices": [],
+        "difficulty": 2
+    },
+    {
+        "questionText": "Trong truyện cổ tích Cây tre trăm đốt, nếu mỗi đốt tre dài 315 mm thì cây tre trăm đốt có cao bằng toà nhà 10 tầng với chiều cao là 33,25 m không?",
+        "imagePath": "",
+        "correctAnswer": "Không",
+        "isMultipleChoice": true,
+        "choices": ["Có", "Không"],
+        "difficulty": 2
+    },
+    {
+        "questionText": "14 tạ; 72 yến; 5 kg dưới dạng số thập phân có đơn vị đo là tấn. Viết là ... tấn",
+        "imagePath": "",
+        "correctAnswer": "1,4",
+        "isMultipleChoice": false,
+        "choices": [],
+        "difficulty": 2
+    },
+    {
+        "questionText": "Trung bình mỗi ngày, một con voi ăn hết 150 kg thức ăn (cỏ, lá cây, trái cây, ...). Hỏi trong 30 ngày con voi đó ăn hết bao nhiêu tấn thức ăn?",
+        "imagePath": "",
+        "correctAnswer": "4,5",
+        "isMultipleChoice": false,
+        "choices": [],
+        "difficulty": 2
+    },
+    {
+        "questionText": "80 m2 26 dm2 dưới dạng số thập phân có đơn vị đo là mét vuông. Viết là ... mét vuông",
+        "imagePath": "",
+        "correctAnswer": "80,26",
+        "isMultipleChoice": false,
+        "choices": [],
+        "difficulty": 2
+    },
+    {
+        "questionText": "Một thửa ruộng dạng hình chữ nhật có chiều dài 250 m, chiều rộng 75 m. Diện tích của thửa ruộng đó là .?. ha.",
+        "imagePath": "",
+        "correctAnswer": "1,875",
+        "isMultipleChoice": true,
+        "choices": ["18750","1,255","25750","1,875"],
+        "difficulty": 2
+    },
+    {
+        "questionText": "Đặt tính rồi tính: 1,7 × 5 = ?",
+        "imagePath": "",
+        "correctAnswer": "8,5",
+        "isMultipleChoice": false,
+        "choices": [],
+        "difficulty": 2
+    },
+    {
+        "questionText": "Đặt tính rồi tính: 0,45 x 12 = ?",
+        "imagePath": "",
+        "correctAnswer": "5,4",
+        "isMultipleChoice": false,
+        "choices": [],
+        "difficulty": 2
+    },
+    {
+        "questionText": "Mỗi giờ xe máy đi được 30,5 km. Hỏi trong 3 giờ xe máy đó đi được bao nhiêu ki-lô-mét?",
+        "imagePath": "",
+        "correctAnswer": "91,5",
+        "isMultipleChoice": true,
+        "choices": ["1875","1,255","25,750","91,5"],
+        "difficulty": 2
+    },
+    {
+        "questionText": "Đặt tính rồi tính: 77,9 x 12,2 = ?",
+        "imagePath": "",
+        "correctAnswer": "950,38",
+        "isMultipleChoice": true,
+        "choices": ["18750","950,38","950,750","1,875"],
+        "difficulty": 2
+    },
+    {
+        "questionText": "Một người đi xe đạp trung bình mỗi giờ đi được 14,5 km. Hỏi trong 2,5 giờ người đó đi được bao nhiêu ki-lô-mét?",
+        "imagePath": "",
+        "correctAnswer": "36,25",
+        "isMultipleChoice": true,
+        "choices": ["36,25","36,255","25,750","1,875"],
+        "difficulty": 2
+    },
+    {
+        "questionText": "Tính nhẩm: 1,67 × 10 = ?",
+        "imagePath": "",
+        "correctAnswer": "16,7",
+        "isMultipleChoice": false,
+        "choices": [],
+        "difficulty": 2
+    },
+    {
+        "questionText": "Tính nhẩm: 2,82 × 1 000 = ?",
+        "imagePath": "",
+        "correctAnswer": "2820",
+        "isMultipleChoice": false,
+        "choices": [],
+        "difficulty": 2
+    },
+    {
+        "questionText": "0,12 dm = .?. cm",
+        "imagePath": "",
+        "correctAnswer": "1,2",
+        "isMultipleChoice": false,
+        "choices": [],
+        "difficulty": 2
+    },
+    {
+        "questionText": "9,2 cm2 = .?. mm2",
+        "imagePath": "",
+        "correctAnswer": "920",
+        "isMultipleChoice": false,
+        "choices": [],
+        "difficulty": 2
+    },
+    {
+        "questionText": "Đặt tính rồi tính: 9,1 : 7 = ?",
+        "imagePath": "",
+        "correctAnswer": "1,3",
+        "isMultipleChoice": true,
+        "choices": ["1,3","1,2","1,33","1,24"],
+        "difficulty": 2
+    },
+    {
+        "questionText": "Đặt tính rồi tính: 80,6 : 26 = ?",
+        "imagePath": "",
+        "correctAnswer": "3,1",
+        "isMultipleChoice": true,
+        "choices": ["3,3","3,2","3,33","3,1"],
+        "difficulty": 2
+    },
+    {
+        "questionText": "Cả 3 con gà cân nặng 5,25 kg. Trung bình mỗi con gà cân nặng .?. kg.",
+        "imagePath": "",
+        "correctAnswer": "1,75 kg",
+        "isMultipleChoice": true,
+        "choices": ["3,3 kg","1,75 kg","3,33 kg","3,1 kg"],
+        "difficulty": 2
+    },
+    {
+        "questionText": "Đặt tính rồi tính: 51 : 12 = ?",
+        "imagePath": "",
+        "correctAnswer": "4,25",
+        "isMultipleChoice": true,
+        "choices": ["4,25","4,255","4,3","4,31"],
+        "difficulty": 2
+    },
+    {
+        "questionText": "5/8 dưới dạng số thập phân. Viết là ...",
+        "imagePath": "",
+        "correctAnswer": "0,625",
+        "isMultipleChoice": true,
+        "choices": ["0,65","0,625","0,3","1,31"],
+        "difficulty": 2
+    },
+    {
+        "questionText": "Làm 4 cái bánh như nhau hết 1 kg bột. Hỏi làm 6 cái bánh như thế hết bao nhiêu ki-lô-gam bột?",
+        "imagePath": "",
+        "correctAnswer": "1,5 kg",
+        "isMultipleChoice": true,
+        "choices": ["1,25 kg","4,2 kg","1,5 kg","4,31 kg"],
+        "difficulty": 2
+    },
+    {
+        "questionText": "Tính nhẩm: 742,5 : 10 = ?",
+        "imagePath": "",
+        "correctAnswer": "74,25",
+        "isMultipleChoice": true,
+        "choices": ["7,425","742,5","74,2","7,2450"],
+        "difficulty": 2
+    },
+    {
+        "questionText": "Tính nhẩm: 742,5 : 1000 = ?",
+        "imagePath": "",
+        "correctAnswer": "0,7425",
+        "isMultipleChoice": true,
+        "choices": ["0,7425","074,25","7,425","742,5"],
+        "difficulty": 2
+    },
+    {
+        "questionText": "Đặt tính rồi tính 456 : 3,8",
+        "imagePath": "",
+        "correctAnswer": "120",
+        "isMultipleChoice": true,
+        "choices": ["120","125","75","4,51"],
+        "difficulty": 2
+    },
+    {
+        "questionText": "Chia 9 kg gạo vào các túi, mỗi túi chứa 1,5 kg gạo thì được bao nhiêu túi?",
+        "imagePath": "",
+        "correctAnswer": "6 túi",
+        "isMultipleChoice": true,
+        "choices": ["6 túi","5 túi","7 túi","12 túi"],
+        "difficulty": 2
+    },
+    {
+        "questionText": "Đặt tính rồi tính 7,75 : 2,5 = ?",
+        "imagePath": "",
+        "correctAnswer": "3,1",
+        "isMultipleChoice": true,
+        "choices": ["4,1","4,3","3,1","3,3"],
+        "difficulty": 2
+    },
+    {
+        "questionText": "Mỗi bước nhảy của một con thỏ được 0,52 m. Hỏi con thỏ đó nhảy bao nhiêu bước để di chuyển hết quãng đường 7,8 m?",
+        "imagePath": "",
+        "correctAnswer": "15 bước",
+        "isMultipleChoice": true,
+        "choices": ["8 bước","10 bước","15 bước","150 bước"],
         "difficulty": 2
     }
 
