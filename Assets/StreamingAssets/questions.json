@@ -1111,6 +1111,133 @@
         "isMultipleChoice": true,
         "choices": ["8 bước","10 bước","15 bước","150 bước"],
         "difficulty": 2
-    }
-
+    },
+    {
+        "questionText": "Đâu là tam giác vuông?",
+        "imagePath": "Image/c43_hinh_1",
+        "correctAnswer": "Hình 1",
+        "isMultipleChoice": true,
+        "choices": ["Hình 1","Hình 2","Hình 3","Hình 4"],
+        "difficulty": 1
+    },
+    {
+        "questionText": "Đâu là tam giác tù?",
+        "imagePath": "Image/c43_hinh_1",
+        "correctAnswer": "Hình 2",
+        "isMultipleChoice": true,
+        "choices": ["Hình 1","Hình 2","Hình 3","Hình 4"],
+        "difficulty": 1
+    },
+    {
+        "questionText": "Đâu là tam giác nhọn?",
+        "imagePath": "Image/c43_hinh_1",
+        "correctAnswer": "Hình 3",
+        "isMultipleChoice": true,
+        "choices": ["Hình 1","Hình 2","Hình 3","Hình 4"],
+        "difficulty": 1
+    },
+    {
+        "questionText": "Đâu là tam giác đều?",
+        "imagePath": "Image/c43_hinh_1",
+        "correctAnswer": "Hình 4",
+        "isMultipleChoice": true,
+        "choices": ["Hình 1","Hình 2","Hình 3","Hình 4"],
+        "difficulty": 1
+    },
+    {
+        "questionText": "Tam giác ABC có đường cao là ...",
+        "imagePath": "Image/c43_dcao_1",
+        "correctAnswer": "CK",
+        "isMultipleChoice": true,
+        "choices": ["CK","AB","BC","AC"],
+        "difficulty": 2
+    },
+    {
+        "questionText": "Tính diện tích hình tam giác có độ dài đáy là a = 1/2 cm và chiều cao là h = 4/5 cm.",
+        "imagePath": "",
+        "correctAnswer": "1/5 cm2",
+        "isMultipleChoice": true,
+        "choices": ["1/5 cm2","1/5 cm","1,5 cm2","1,50 cm"],
+        "difficulty": 2
+    },
+    {
+        "questionText": "Một khu đất dạng hình tam giác có đáy là 12 m và chiều cao tương ứng là 18 m. Tính diện tích của khu đất đó.",
+        "imagePath": "",
+        "correctAnswer": "108 m2",
+        "isMultipleChoice": true,
+        "choices": ["108 m","108 m2","118 m2","1108 cm2"],
+        "difficulty": 2
+    },
+    {
+        "questionText": "Hình nào không phải là hình thang?",
+        "imagePath": "",
+        "correctAnswer": "Hình 3, Hình 6",
+        "isMultipleChoice": true,
+        "choices": ["Hình 2, Hình 3","Hình 3, Hình 6","Hình 1, Hình 6","Hình 3, Hình 4"],
+        "difficulty": 2
+    },
+    {
+        "questionText": "Hình thang này có mấy góc vuông?",
+        "imagePath": "Image/c45_hinhthangvuong_1",
+        "correctAnswer": "2",
+        "isMultipleChoice": true,
+        "choices": ["8","2","3","4"],
+        "difficulty": 2
+    },
+    {
+        "questionText": "",
+        "imagePath": "Image/c46_dtichhthang_1",
+        "correctAnswer": "48 cm2",
+        "isMultipleChoice": true,
+        "choices": ["16,5 dm2","0,48 dm","48 cm2","48 cm"],
+        "difficulty": 2
+    },
+    {
+        "questionText": "Một mảnh vườn dạng hình thang có độ dài hai đáy là 24 m và 18 m, chiều cao là 12 m. Biết rằng 2/5 diện tích vườn để trồng hoa cúc, phần còn lại để trồng hoa hồng. Hỏi diện tích trồng hoa hồng là bao nhiêu mét vuông?",
+        "imagePath": "",
+        "correctAnswer": "151,2 m2",
+        "isMultipleChoice": true,
+        "choices": ["151,2 m2","100,8 m2","252 m2","150 m2"],
+        "difficulty": 3
+    },
+    {
+        "questionText": "",
+        "imagePath": "Image/c47_bk_1",
+        "correctAnswer": "3,6",
+        "isMultipleChoice": true,
+        "choices": ["3,6","14,4","3,1","49,4"],
+        "difficulty": 2
+    },
+    {
+        "questionText": "Biết đường kính d = 3 m. Vậy chu vi của hình tròn là ... m",
+        "imagePath": "",
+        "correctAnswer": "9,42",
+        "isMultipleChoice": false,
+        "choices": [],
+        "difficulty": 2
+    },
+    {
+        "questionText": "Biết bán kính r = 1/2 m. Vậy diện tích của hình tròn là ... m2",
+        "imagePath": "",
+        "correctAnswer": "0,785",
+        "isMultipleChoice": false,
+        "choices": [],
+        "difficulty": 2
+    },
+    {
+        "questionText": "Vành của chiếc nón lá có dạng đường tròn. Hỏi một nón lá có đường kính vành nón là 40 cm thì độ dài vành nón đó là bao nhiêu?",
+        "imagePath": "Image/c48_nonla_1",
+        "correctAnswer": "125,6 cm",
+        "isMultipleChoice": true,
+        "choices": ["12,56 cm","125,6 cm","12,6 cm","15,60 cm"],
+        "difficulty": 2
+    },
+    {
+        "questionText": "Câu nào đúng?",
+        "imagePath": "Image/c49_htron_1",
+        "correctAnswer": "Diện tích phần tô màu bằng 0,4 diện tích hình tròn.",
+        "isMultipleChoice": true,
+        "choices": ["Diện tích hình tròn gấp 4 lần diện tích phần tô màu.","Diện tích phần tô màu bằng 1/5 diện tích hình tròn.","Diện tích phần tô màu bằng 0,4 diện tích hình tròn.","Tất cả đều sai."],
+        "difficulty": 2
+    }    
 ]
