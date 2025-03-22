@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      c4_honso_1_0: 4899441546796684409
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      c3_quydong_1_0: -5858266208948059259
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

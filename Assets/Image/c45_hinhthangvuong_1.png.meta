@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 80d5e9dbf74dd124eb47e33f83254564
+guid: 6ca05f86668ab8145a74757561fcc494
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5525395570767104065
-    second: c3_baitoan_2_0
+      213: 4617660948237534860
+    second: c45_hinhthangvuong_1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: c3_baitoan_2_0
+      name: c45_hinhthangvuong_1_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 934
-        height: 111
+        width: 627
+        height: 412
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fb7f8e0d00ad153b0800000000000000
-      internalID: -5525395570767104065
+      spriteID: c8644e0ca2a351040800000000000000
+      internalID: 4617660948237534860
       vertices: []
       indices: 
       edges: []
@@ -134,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      c3_baitoan_2_0: -5525395570767104065
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
