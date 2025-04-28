@@ -9,10 +9,12 @@ public class XuLyVaCham : MonoBehaviour
     public TextMeshProUGUI heartText;
     public TextMeshProUGUI StarText;
     public Animator animator;
-    public Dc playerController; 
+    public Dc playerController;
 
     private Vector2 spawnPoint;
     private bool isDead = false;
+    // để GameManager có thể truy cập
+    public GameObject currentTriggerObject;
 
     void Start()
     {
@@ -23,20 +25,19 @@ public class XuLyVaCham : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D colision)
     {
-        if (colision.CompareTag("Vang"))
+        if (colision.CompareTag("Vang") || colision.CompareTag("enemy"))
         {
-            Star++;
-            StarText.SetText(Star.ToString());
-            Destroy(colision.gameObject);
+            currentTriggerObject = colision.gameObject;
+            GameManager.Instance.TriggerQuestion(currentTriggerObject);
         }
-        else if (colision.CompareTag("GaiNhon") || colision.CompareTag("enemy"))
+        else if (colision.CompareTag("GaiNhon"))
         {
             Hp--;
             heartText.SetText(Hp.ToString());
 
             if (Hp > 0)
             {
-                animator.SetTrigger("Hurt"); 
+                animator.SetTrigger("Hurt");
             }
 
             if (Hp <= 0 && !isDead)
@@ -46,21 +47,60 @@ public class XuLyVaCham : MonoBehaviour
         }
     }
 
+    public void TakeDamage()
+    {
+        Hp--;
+        heartText.SetText(Hp.ToString());
+
+        if (Hp > 0)
+        {
+            animator.SetTrigger("Hurt");
+        }
+
+        if (Hp <= 0 && !isDead)
+        {
+            StartCoroutine(DieAndRespawn());
+        }
+    }
+
+    public void CollectItem()
+    {
+        Inventory.Instance.AddItem();
+        StarText.SetText(Inventory.Instance.GetItemCount().ToString());
+        Destroy(currentTriggerObject);
+        currentTriggerObject = null;
+    }
+
+    public void SkipItem()
+    {
+        Destroy(currentTriggerObject);
+        currentTriggerObject = null;
+    }
+
+    public void DefeatEnemy()
+    {
+        if (currentTriggerObject != null)
+        {
+            Destroy(currentTriggerObject);
+            currentTriggerObject = null;
+        }
+    }
+
     IEnumerator DieAndRespawn()
     {
         isDead = true;
-        playerController.canMove = false; 
+        playerController.canMove = false;
         animator.SetTrigger("Death");
 
-        yield return new WaitForSeconds(1.5f); 
+        yield return new WaitForSeconds(1.5f);
 
         transform.position = spawnPoint;
         Hp = 3;
         heartText.SetText(Hp.ToString());
 
-        yield return new WaitForSeconds(0.5f); 
+        yield return new WaitForSeconds(0.5f);
 
         isDead = false;
-        playerController.canMove = true; 
+        playerController.canMove = true;
     }
 }
