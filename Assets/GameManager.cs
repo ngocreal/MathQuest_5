@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System;
 
 public class GameManager : MonoBehaviour
 {
@@ -7,9 +8,13 @@ public class GameManager : MonoBehaviour
     public XuLyVaCham player;
 
     private int playerScore = 0;
+    private int currentLevel = 1; // Màn chơi hiện tại
     private bool isQuestionActive = false;
-    private bool hasShownQuestionAt18 = false; // Theo dõi mốc 18 điểm
-    private bool hasShownQuestionAt36 = false; // Theo dõi mốc 36 điểm
+    private bool hasShownQuestionAt18 = false;
+    private bool hasShownQuestionAt36 = false;
+
+    private int correctAnswersThisLevel = 0; // Số câu đúng trong màn hiện tại
+    private int wrongAnswersThisLevel = 0; // Số câu sai trong màn hiện tại
 
     private void Awake()
     {
@@ -23,27 +28,29 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        // Tải dữ liệu đã lưu
+        LoadPlayerData();
     }
 
     private void Start()
     {
-        Debug.Log($"Điểm số khởi tạo: {playerScore}");
+        Debug.Log($"Điểm số khởi tạo: {playerScore}, Màn: {currentLevel}");
     }
 
     private void Update()
     {
-        // Kiểm tra mốc điểm để tự động hiển thị câu hỏi
         if (!isQuestionActive)
         {
             if (!hasShownQuestionAt18 && playerScore >= 18)
             {
                 hasShownQuestionAt18 = true;
-                DisplayQuestionAtMilestone(2); // Độ khó 2 tại 18 điểm
+                DisplayQuestionAtMilestone(2);
             }
             else if (!hasShownQuestionAt36 && playerScore >= 36)
             {
                 hasShownQuestionAt36 = true;
-                DisplayQuestionAtMilestone(3); // Độ khó 3 tại 36 điểm
+                DisplayQuestionAtMilestone(3);
             }
         }
     }
@@ -57,17 +64,16 @@ public class GameManager : MonoBehaviour
             return;
         }
 
-        // Nếu không đạt mốc điểm, chỉ tiêu diệt quái mà không hiển thị câu hỏi
         if (triggerObject != null && triggerObject.CompareTag("enemy"))
         {
             triggerObject.GetComponent<Enemy_behavior>().Defeat();
             player.DefeatEnemy();
-            AddScore(5); // mỗi quái cho 5 điểm
+            AddScore(5);
         }
         else if (triggerObject != null && triggerObject.CompareTag("Vang"))
         {
             player.CollectItem();
-            AddScore(2); // mỗi vật phẩm cho 2 điểm
+            AddScore(2);
         }
     }
 
@@ -96,7 +102,8 @@ public class GameManager : MonoBehaviour
         Debug.Log($"Trả lời câu hỏi: Đúng = {isCorrect}, Độ khó = {difficulty}");
         if (isCorrect)
         {
-            AddScore(5); // Tăng điểm khi trả lời đúng
+            correctAnswersThisLevel++;
+            AddScore(5);
             Debug.Log($"Điểm số mới: {playerScore}");
             questionUI.HideQuestionPanel();
             isQuestionActive = false;
@@ -117,6 +124,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
+            wrongAnswersThisLevel++;
             questionUI.HideQuestionPanel();
             isQuestionActive = false;
             player.playerController.canMove = true;
@@ -137,6 +145,9 @@ public class GameManager : MonoBehaviour
                 }
             }
         }
+
+        // Lưu dữ liệu sau mỗi câu trả lời
+        SaveAnswerData();
     }
 
     private int GetDifficultyFromScore(int score)
@@ -151,10 +162,69 @@ public class GameManager : MonoBehaviour
     {
         playerScore += points;
         Debug.Log($"Điểm số mới: {playerScore}");
+        PlayerPrefs.SetInt("CurrentScore", playerScore);
+        PlayerPrefs.Save();
     }
 
     public int GetPlayerScore()
     {
         return playerScore;
+    }
+
+    public void CompleteLevel(int level)
+    {
+        Debug.Log($"Hoàn thành màn {level}");
+        currentLevel = level;
+        PlayerPrefs.SetInt("LastPlayedLevel", currentLevel);
+        SaveAnswerData();
+        correctAnswersThisLevel = 0; // Reset sau khi hoàn thành màn
+        wrongAnswersThisLevel = 0;
+    }
+
+    private void SaveAnswerData()
+    {
+        int week = GetCurrentWeekNumber();
+        PlayerPrefs.SetInt($"CorrectAnswersPerLevel_{currentLevel}_{week}", correctAnswersThisLevel);
+        PlayerPrefs.SetInt($"WrongAnswersPerLevel_{currentLevel}_{week}", wrongAnswersThisLevel);
+        PlayerPrefs.SetInt("LastPlayedWeek", week);
+        PlayerPrefs.Save();
+        Debug.Log($"Lưu dữ liệu: Màn {currentLevel}, Tuần {week}, Đúng: {correctAnswersThisLevel}, Sai: {wrongAnswersThisLevel}");
+    }
+
+    private void LoadPlayerData()
+    {
+        playerScore = PlayerPrefs.GetInt("CurrentScore", 0);
+        currentLevel = PlayerPrefs.GetInt("LastPlayedLevel", 1);
+        int week = GetCurrentWeekNumber();
+        correctAnswersThisLevel = PlayerPrefs.GetInt($"CorrectAnswersPerLevel_{currentLevel}_{week}", 0);
+        wrongAnswersThisLevel = PlayerPrefs.GetInt($"WrongAnswersPerLevel_{currentLevel}_{week}", 0);
+        Debug.Log($"Tải dữ liệu: Điểm: {playerScore}, Màn: {currentLevel}, Đúng: {correctAnswersThisLevel}, Sai: {wrongAnswersThisLevel}");
+    }
+
+    private int GetCurrentWeekNumber()
+    {
+        DateTime now = DateTime.Now;
+        int weekNumber = (now.DayOfYear - 1) / 7 + 1;
+        return weekNumber;
+    }
+
+    public int GetCorrectAnswers(int level, int week)
+    {
+        return PlayerPrefs.GetInt($"CorrectAnswersPerLevel_{level}_{week}", 0);
+    }
+
+    public int GetWrongAnswers(int level, int week)
+    {
+        return PlayerPrefs.GetInt($"WrongAnswersPerLevel_{level}_{week}", 0);
+    }
+
+    public int GetLastPlayedLevel()
+    {
+        return PlayerPrefs.GetInt("LastPlayedLevel", 1);
+    }
+
+    public int GetLastPlayedWeek()
+    {
+        return PlayerPrefs.GetInt("LastPlayedWeek", GetCurrentWeekNumber());
     }
 }
