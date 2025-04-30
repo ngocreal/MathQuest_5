@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Unity.VisualScripting;
+using UnityEngine;
 
 public class Dc : MonoBehaviour
 {
@@ -50,11 +51,10 @@ public class Dc : MonoBehaviour
         }
 
         anim.SetFloat("dichuyen", Mathf.Abs(traiPhai));
-
-        if (Input.GetMouseButtonDown(0) && canMove)
-        {
-            anim.SetTrigger("TanCong");
-        }
+        //if (Input.GetMouseButtonDown(0) && canMove)
+        // {
+           // anim.SetTrigger("TanCong");
+        // }
 
         if (duocPhepNhay)
         {
@@ -78,6 +78,7 @@ public class Dc : MonoBehaviour
         }
 
         fallDetector.transform.position = new Vector2(transform.position.x, fallDetector.transform.position.y);
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -86,5 +87,7 @@ public class Dc : MonoBehaviour
         {
             transform.position = respawnPoint;
         }
+
+
     }
 }

@@ -3,12 +3,13 @@
 public class Enemy : MonoBehaviour
 {
     [SerializeField] private float speed = 1f;
-    public Transform leftPoint, rightPoint; // Điểm đánh dấu giới hạn
+    public Transform leftPoint, rightPoint; 
     private bool movingRight = true;
+
+    public int health = 4;
 
     void Start()
     {
-        // Đảm bảo enemy bắt đầu ở vị trí chính giữa hai điểm đánh dấu
         transform.position = leftPoint.position;
     }
 
@@ -32,6 +33,11 @@ public class Enemy : MonoBehaviour
                 Flip();
             }
         }
+
+        if(health <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 
     void Flip()
@@ -39,5 +45,11 @@ public class Enemy : MonoBehaviour
         Vector3 scaler = transform.localScale;
         scaler.x *= -1;
         transform.localScale = scaler;
+    }
+
+    public void TakeDamage(int damage)
+    {
+        health -= damage;
+        Debug.Log("damage TAKEN!");
     }
 }

@@ -15,7 +15,7 @@ public class Jumppad : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             collision.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.up * doNay, ForceMode2D.Impulse);
-            anim.SetTrigger("JumpPad"); // ✅ Bật animation JumpPad
+            anim.SetTrigger("JumpPad");
         }
     }
 
@@ -23,7 +23,7 @@ public class Jumppad : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            anim.ResetTrigger("JumpPad"); // ✅ Tắt animation khi rời khỏi Jumppad
+            anim.ResetTrigger("JumpPad"); 
         }
     }
 }
