@@ -1,0 +1,64 @@
+{
+	"questions": [
+		{
+			"questionText": "Số 57 308. Viết là?",
+			"imagePath": "",
+			"correctAnswer": "Năm mươi bảy nghìn ba trăm linh tám",
+			"isMultipleChoice": true,
+			"choices": [
+				"Năm mươi bảy nghìn ba trăm linh tám",
+				"Năm mươi bảy nghìn tám trăm linh ba",
+				"Năm trăm bảy mươi nghìn ba trăm linh tám",
+				"Năm nghìn bảy trăm ba mươi tám"
+			]
+		},
+		{
+			"questionText": "Số 460 092. Viết là?",
+			"imagePath": "",
+			"correctAnswer": "Bốn trăm sáu mươi nghìn không trăm chín mươi hai",
+			"isMultipleChoice": true,
+			"choices": [
+				"Bốn trăm sáu mươi nghìn không trăm chín mươi hai",
+				"Bốn trăm sáu mươi nghìn chín trăm linh hai",
+				"Bốn sáu nghìn không trăm chín mươi hai",
+				"Bốn trăm sáu mươi nghìn tám trăm chín mươi hai"
+			]
+		},
+		{
+			"questionText": "So sánh hai số: 987 .?. 1 082",
+			"imagePath": "",
+			"correctAnswer": "<",
+			"isMultipleChoice": true,
+			"choices": [
+				">",
+				"<",
+				"=",
+				"#"
+			]
+		},
+		{
+			"questionText": "Câu nào đúng?",
+			"imagePath": "",
+			"correctAnswer": "0; 1; 2; 3; 4; 5, ... là dãy số tự nhiên",
+			"isMultipleChoice": true,
+			"choices": [
+				"0; 1; 2; 3; 4; 5, ... là dãy số tự nhiên",
+				"1 là số tự nhiên bé nhất; 999 999 999 là số tự nhiên lớn nhất",
+				"Trong số 60 060 060, các chữ số 6 đều có giá trị là 60",
+				"Không có câu nào"
+			]
+		},
+		{
+			"questionText": "Đặt tính rồi tính",
+			"imagePath": "Image/c1_dattinhroitinh_1",
+			"correctAnswer": "490829",
+			"isMultipleChoice": true,
+			"choices": [
+				"490829",
+				"49092",
+				"840829",
+				"890829"
+			]
+		}
+	]
+}

@@ -1,0 +1,102 @@
+﻿using System.Collections.Generic;
+using System.IO;
+using TMPro;
+using UnityEngine;
+using UnityEngine.UI;
+    public static GameManager Instance { get; private set; }
+
+    public TMP_Text questionText;
+    public GameObject[] answerButtons;
+    public TMP_Text[] answerTexts;
+    public Image questionImage;
+    public GameObject questionPanel;
+    private List<Question> questions = new List<Question>();
+    private Question currentQuestion;
+ private void Awake()
+    {
+ // Singleton pattern to ensure one instance of GameManager
+        if (Instance != null && Instance != this)
+        {      Destroy(gameObject);
+        }
+        else
+        {    Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }}
+
+    private void Start()
+    {      LoadQuestionsFromJson();if (questions.Count > 0)
+        { // Call the method to display a random question based on selected difficulty
+            DisplayRandomQuestionWithDifficulty(selectedDifficulty);
+        }
+        else
+        {
+            Debug.LogWarning("Không có câu hỏi nào được nạp.");
+        }
+    }
+
+    public void TriggerQuestion(GameObject triggerObject)
+    {  int difficulty = 1;
+
+        if (triggerObject.CompareTag("enemy"))
+            difficulty = 2;
+        else if (triggerObject.CompareTag("Vang"))
+            difficulty = 1;
+
+        DisplayRandomQuestionWithDifficulty(difficulty);
+    }
+
+    public void LoadQuestionsFromJson()
+    {
+        string path = Path.Combine(Application.streamingAssetsPath, "Question.json");
+
+        if (!File.Exists(path))
+        {     Debug.LogError("Không tìm thấy file JSON: " + path);
+            return;
+        }
+     Debug.LogError("Không tìm thấy file JSON: " + path);
+            return;
+        }
+ string jsonText = File.ReadAllText(path);
+        QuestionListWrapper wrapper = JsonUtility.FromJson<QuestionListWrapper>(jsonText);
+
+        if (wrapper != null && wrapper.questions != null)
+        {    questions = wrapper.questions;
+            Debug.Log("Tải thành công " + questions.Count + " câu hỏi.");
+        }else
+        {
+  Debug.LogError("Lỗi phân tích JSON.");
+        }
+    } public void DisplayRandomQuestionWithDifficulty(int difficulty)
+    { public void DisplayRandomQuestionWithDifficulty(int difficulty)
+    {currentQuestion = GetRandomQuestionByDifficulty(difficulty);if (currentQuestion == null)
+        {   Debug.LogWarning("Không tìm thấy câu hỏi theo độ khó " + difficulty);
+            return;
+        } // Hiển thị câu hỏi
+        questionPanel.SetActive(true);
+        questionText.text = currentQuestion.questionText;
+
+        if (!string.IsNullOrEmpty(currentQuestion.imagePath))
+        { Sprite image = Resources.Load<Sprite>(currentQuestion.imagePath);
+            if (image != null)
+            {
+                questionImage.gameObject.SetActive(true);
+                questionImage.sprite = image;
+            }
+            else
+            {   Debug.LogWarning("Không tìm thấy ảnh tại: " + currentQuestion.imagePath);
+                questionImage.gameObject.SetActive(false);
+            }
+        }
+        else
+        {   questionImage.gameObject.SetActive(false);
+        }// Hiển thị các đáp án
+        for (int i = 0; i < currentQuestion.choices.Length; i++)
+        {
+            answerTexts[i].text = currentQuestion.choices[i];
+            answerButtons[i].SetActive(true);  // Hiển thị các nút trả lời
+        }
+    } public Question GetRandomQuestionByDifficulty(int difficulty)
+    { List<Question> filtered = questions.FindAll(q => q.difficulty == difficulty);
+        if (filtered.Count == 0) return null;
+        return filtered[Random.Range(0, filtered.Count)];
+    }}

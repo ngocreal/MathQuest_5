@@ -7,6 +7,7 @@ TagManager:
   - Ladder
   - GaiNhon
   - Vang
+  - Chest
   - enemy
   - FallDetector
   - UI

@@ -1741,7 +1741,12 @@
             "imagePath": "",
             "correctAnswer": "0,785",
             "isMultipleChoice": false,
-            "choices": [],
+            "choices": [
+               "151,23",
+               "10,156",
+               "0,785",
+               "15,11"
+          ],
             "difficulty": 3
         },
         {

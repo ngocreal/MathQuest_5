@@ -1,0 +1,134 @@
+{
+	"questions": [
+		{
+			"questionText": "Một sân bóng đá dạng hình chữ nhật có chu vi 346 m, chiều dài hơn chiều rộng là 37 m. Chiều rộng sân bóng đá là?",
+			"imagePath": "",
+			"correctAnswer": "68",
+			"isMultipleChoice": true,
+			"choices": [
+				"68",
+				"60",
+				"450",
+				"90"
+			],
+			"difficulty": 2
+		},
+		{
+			"questionText": "Một khu vực trồng chè (trà) có diện tích là 35 ha. Hằng năm, trung bình 1 ha thu hoạch được 10 tấn chè búp tươi; 1 tấn chè búp tươi bán được khoảng 50 triệu đồng. Trong một năm, khu vực đó thu được .?. triệu đồng tiền bán chè búp tươi.",
+			"imagePath": "",
+			"correctAnswer": "17500 (triệu đồng)",
+			"isMultipleChoice": true,
+			"choices": [
+				"17500 (triệu đồng)",
+				"1750 (triệu đồng)",
+				"10050 (triệu đồng)",
+				"10500 (triệu đồng)"
+			],
+			"difficulty": 2
+		},
+		{
+			"questionText": "Số 10,362 có phần thập phân gồm các chữ số:",
+			"imagePath": "",
+			"correctAnswer": "3; 6; 2",
+			"isMultipleChoice": true,
+			"choices": [
+				"3; 6; 2",
+				"3; 0; 2",
+				"1; 6; 2",
+				"0; 3; 2; 6"
+			],
+			"difficulty": 2
+		},
+		{
+			"questionText": "34,012. Chữ số 4 thuộc hàng ...",
+			"imagePath": "",
+			"correctAnswer": "hàng đơn vị",
+			"isMultipleChoice": true,
+			"choices": [
+				"hàng phần mười",
+				"hàng phần chục",
+				"hàng phần nghìn",
+				"hàng phần đơn vị"
+			],
+			"difficulty": 2
+		},
+		{
+			"questionText": "Cặp số đo nào bằng nhau?",
+			"imagePath": "",
+			"correctAnswer": "20,700 kg; 20,70 kg",
+			"isMultipleChoice": true,
+			"choices": [
+				"20,7 kg; 2,070 kg",
+				"2,070 kg; 20,700 kg",
+				"20,700 kg; 20,70 kg",
+				"2,070; 20,70"
+			],
+			"difficulty": 2
+		},
+		{
+			"questionText": "Câu nào đúng?",
+			"imagePath": "Image/c49_htron_1",
+			"correctAnswer": "Diện tích phần tô màu bằng 0,4 diện tích hình tròn.",
+			"isMultipleChoice": true,
+			"choices": [
+				"Diện tích hình tròn gấp 4 lần diện tích phần tô màu.",
+				"Diện tích phần tô màu bằng 1/5 diện tích hình tròn.",
+				"Diện tích phần tô màu bằng 0,4 diện tích hình tròn.",
+				"Tất cả đều sai."
+			],
+			"difficulty": 3
+		},
+		{
+			"questionText": "Vành của chiếc nón lá có dạng đường tròn. Hỏi một nón lá có đường kính vành nón là 40 cm thì độ dài vành nón đó là bao nhiêu?",
+			"imagePath": "Image/c48_nonla_1",
+			"correctAnswer": "125,6 cm",
+			"isMultipleChoice": true,
+			"choices": [
+				"12,56 cm",
+				"125,6 cm",
+				"12,6 cm",
+				"15,60 cm"
+			],
+			"difficulty": 3
+		},
+		{
+			"questionText": "",
+			"imagePath": "Image/c47_bk_1",
+			"correctAnswer": "3,6",
+			"isMultipleChoice": true,
+			"choices": [
+				"3,6",
+				"14,4",
+				"3,1",
+				"49,4"
+			],
+			"difficulty": 3
+		},
+		{
+			"questionText": "Một mảnh vườn dạng hình thang có độ dài hai đáy là 24 m và 18 m, chiều cao là 12 m. Biết rằng 2/5 diện tích vườn để trồng hoa cúc, phần còn lại để trồng hoa hồng. Hỏi diện tích trồng hoa hồng là bao nhiêu mét vuông?",
+			"imagePath": "",
+			"correctAnswer": "151,2 m2",
+			"isMultipleChoice": true,
+			"choices": [
+				"151,2 m2",
+				"100,8 m2",
+				"252 m2",
+				"150 m2"
+			],
+			"difficulty": 3
+		},
+		{
+			"questionText": "Biết bán kính r = 1/2 m. Vậy diện tích của hình tròn là ... m2",
+			"imagePath": "",
+			"correctAnswer": "0,785",
+			"isMultipleChoice": false,
+			"choices": [
+				"151,23",
+				"10,156",
+				"0,785",
+				"15,11"
+			],
+			"difficulty": 3
+		}
+	]
+}

@@ -7,6 +7,6 @@ public class GameUI : MonoBehaviour
 
     private void Update()
     {
-        scoreText.text = $"Điểm: {GameManager.Instance.GetPlayerScore()}";
+       // scoreText.text = $"Điểm: {GameManager.Instance.GetPlayerScore()}";
     }
 }

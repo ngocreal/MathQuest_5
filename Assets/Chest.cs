@@ -1,16 +1,32 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Chest : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    public PopUpSystem popUpSystem;
+    public string message = "Bạn đã tìm thấy một rương bí ẩn!";
+    private bool isPlayerNearby = false;
 
-    // Update is called once per frame
     void Update()
     {
-        
+        if (isPlayerNearby && Input.GetKeyDown(KeyCode.E))
+        {
+            popUpSystem.PopUp(message);
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            isPlayerNearby = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            isPlayerNearby = false;
+        }
     }
 }
