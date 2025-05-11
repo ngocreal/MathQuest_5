@@ -2,7 +2,7 @@
 using UnityEngine.UI;
 using TMPro;
 
-public class QuestUI1 : MonoBehaviour
+public class QuestUI2 : MonoBehaviour
 {
     [Header("UI Elements")]
     public TextMeshProUGUI questionText;
@@ -21,16 +21,16 @@ public class QuestUI1 : MonoBehaviour
 
     private QuestionData question = new QuestionData
     {
-        questionText = "Câu hỏi 1: Số 57 308. Viết là?",
+        questionText = "Câu hỏi 2: Số 460 092. Viết là?",
         imagePath = "",
-        correctAnswer = "Năm mươi bảy nghìn ba trăm linh tám",
+        correctAnswer = "Bốn trăm sáu mươi nghìn không trăm chín mươi hai",
         isMultipleChoice = true,
         choices = new string[]
         {
-            "A.Năm mươi bảy nghìn ba trăm linh tám",
-            "B.Năm mươi bảy nghìn tám trăm linh ba",
-            "C.Năm trăm bảy mươi nghìn ba trăm linh tám",
-            "D.Năm nghìn bảy trăm ba mươi tám"
+            "A.Bốn trăm sáu mươi nghìn không trăm chín mươi hai",
+            "B.Bốn trăm sáu mươi nghìn chín trăm linh hai",
+            "C.Bốn sáu nghìn không trăm chín mươi hai",
+            "D.Bốn trăm sáu mươi nghìn tám trăm chín mươi hai"
         }
     };
 

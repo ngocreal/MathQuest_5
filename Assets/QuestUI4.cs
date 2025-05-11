@@ -2,7 +2,7 @@
 using UnityEngine.UI;
 using TMPro;
 
-public class QuestUI1 : MonoBehaviour
+public class QuestUI4 : MonoBehaviour
 {
     [Header("UI Elements")]
     public TextMeshProUGUI questionText;
@@ -21,16 +21,16 @@ public class QuestUI1 : MonoBehaviour
 
     private QuestionData question = new QuestionData
     {
-        questionText = "Câu hỏi 1: Số 57 308. Viết là?",
+        questionText = "Câu hỏi 4: Câu nào đúng?",
         imagePath = "",
-        correctAnswer = "Năm mươi bảy nghìn ba trăm linh tám",
+        correctAnswer = "0; 1; 2; 3; 4; 5, ... là dãy số tự nhiên",
         isMultipleChoice = true,
         choices = new string[]
         {
-            "A.Năm mươi bảy nghìn ba trăm linh tám",
-            "B.Năm mươi bảy nghìn tám trăm linh ba",
-            "C.Năm trăm bảy mươi nghìn ba trăm linh tám",
-            "D.Năm nghìn bảy trăm ba mươi tám"
+            "A.0; 1; 2; 3; 4; 5, ... là dãy số tự nhiên",
+            "B.1 là số tự nhiên bé nhất, 999 999 là số tự nhiên lớn nhất",
+            "C.Trong số 60 060 060, các chữ số 6 đều có giá trị là 60",
+            "D.Không có câu nào"
         }
     };
 

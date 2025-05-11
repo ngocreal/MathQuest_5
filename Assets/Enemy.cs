@@ -2,11 +2,14 @@
 
 public class Enemy : MonoBehaviour
 {
+    //Dừng xóa hay chỉnh sửa code trong XuLyVaCham.cs và cái Enemy.cs lần trước bà sửa sao cái nó chạy éo được luôn sửa lại thì cũng éo chạy nếu bà muốn thêm cái gì
+    //thì tạo Cs khác rồi chat hỏi kết nối mà không làm thay đổi cái cs này.
+
     [SerializeField] private float speed = 1f;
-    public Transform leftPoint, rightPoint; 
+    public Transform leftPoint, rightPoint;
     private bool movingRight = true;
 
-    public int health = 4;
+    public int health = 3; // Thêm thuộc tính máu
 
     void Start()
     {
@@ -14,6 +17,16 @@ public class Enemy : MonoBehaviour
     }
 
     void Update()
+    {
+        Move();
+
+        if (health <= 0)
+        {
+            Destroy(gameObject); // Enemy biến mất khi máu <= 0
+        }
+    }
+
+    void Move()
     {
         if (movingRight)
         {
@@ -33,11 +46,6 @@ public class Enemy : MonoBehaviour
                 Flip();
             }
         }
-
-        if(health <= 0)
-        {
-            Destroy(gameObject);
-        }
     }
 
     void Flip()
@@ -50,6 +58,6 @@ public class Enemy : MonoBehaviour
     public void TakeDamage(int damage)
     {
         health -= damage;
-        Debug.Log("damage TAKEN!");
+        Debug.Log("Enemy took " + damage + " damage. Current health: " + health);
     }
 }

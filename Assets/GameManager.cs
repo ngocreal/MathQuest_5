@@ -5,12 +5,19 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
 
     public QuestDatabase questionDatabase;
-   // public QuestUI1 questUI;
+    // public QuestUI1 questUI;
 
     private void Awake()
     {
-        if (Instance == null) Instance = this;
-        else Destroy(gameObject);
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
     }
 
     public void TriggerQuestion(GameObject triggerObject)

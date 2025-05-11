@@ -1,16 +1,10 @@
 fileFormatVersion: 2
-guid: 65b59ecfe9690154987f8213d5fc5a4b
+guid: 509f7908b5823404e9fc7037e0931e14
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1694913177206695654
-    second: Key_0
-  - first:
-      213: 1349380382610176929
-    second: Key_1
-  - first:
-      213: -7993208405712638566
-    second: Key_2
+      213: 2906736079727259281
+    second: PlayePortral_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -57,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 64
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -106,35 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Key_0
+      name: PlayePortral_0
       rect:
         serializedVersion: 2
-        x: 4
-        y: 1
-        width: 8
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6e6a88cfd8a858710800000000000000
-      internalID: 1694913177206695654
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Key_1
-      rect:
-        serializedVersion: 2
-        x: 21
+        x: 0
         y: 0
-        width: 6
-        height: 14
+        width: 64
+        height: 70
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -143,30 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1ab3c540f46f9b210800000000000000
-      internalID: 1349380382610176929
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Key_2
-      rect:
-        serializedVersion: 2
-        x: 36
-        y: 0
-        width: 8
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a9de4d90e4b621190800000000000000
-      internalID: -7993208405712638566
+      spriteID: 19e64ff501dc65820800000000000000
+      internalID: 2906736079727259281
       vertices: []
       indices: 
       edges: []
@@ -185,9 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Key_0: 1694913177206695654
-      Key_1: 1349380382610176929
-      Key_2: -7993208405712638566
+      PlayePortral_0: 2906736079727259281
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,20 +1,18 @@
-﻿using UnityEngine;
+﻿using System.Collections;
 using TMPro;
-using System.Collections;
+using UnityEngine;
 
 public class XuLyVaCham : MonoBehaviour
 {
-    public int Hp = 3;
+    public int Hp = 2;
+    public int maxHealth = 3;
     public int Star = 0;
     public TextMeshProUGUI heartText;
     public TextMeshProUGUI StarText;
     public Animator animator;
     public Dc playerController;
-
     private Vector2 spawnPoint;
     private bool isDead = false;
-    // để GameManager có thể truy cập
-    public GameObject currentTriggerObject;
 
     void Start()
     {
@@ -25,12 +23,13 @@ public class XuLyVaCham : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D colision)
     {
-        if (colision.CompareTag("Vang") || colision.CompareTag("enemy"))
+        if (colision.CompareTag("Vang"))
         {
-            currentTriggerObject = colision.gameObject;
-            GameManager.Instance.TriggerQuestion(currentTriggerObject);
+            Star++;
+            StarText.SetText(Star.ToString());
+            Destroy(colision.gameObject);
         }
-        else if (colision.CompareTag("GaiNhon"))
+        else if (colision.CompareTag("GaiNhon") || colision.CompareTag("enemy"))
         {
             Hp--;
             heartText.SetText(Hp.ToString());
@@ -47,43 +46,15 @@ public class XuLyVaCham : MonoBehaviour
         }
     }
 
-    public void TakeDamage()
+    public void RestoreHealth(int amount)
     {
-        Hp--;
+        Debug.Log("Change Health called.");
+        Hp += amount;
+        if (Hp > maxHealth)
+        {
+            Hp = maxHealth;
+        }
         heartText.SetText(Hp.ToString());
-
-        if (Hp > 0)
-        {
-            animator.SetTrigger("Hurt");
-        }
-
-        if (Hp <= 0 && !isDead)
-        {
-            StartCoroutine(DieAndRespawn());
-        }
-    }
-
-    public void CollectItem()
-    {
-        Inventory.Instance.AddItem();
-        StarText.SetText(Inventory.Instance.GetItemCount().ToString());
-        Destroy(currentTriggerObject);
-        currentTriggerObject = null;
-    }
-
-    public void SkipItem()
-    {
-        Destroy(currentTriggerObject);
-        currentTriggerObject = null;
-    }
-
-    public void DefeatEnemy()
-    {
-        if (currentTriggerObject != null)
-        {
-            Destroy(currentTriggerObject);
-            currentTriggerObject = null;
-        }
     }
 
     IEnumerator DieAndRespawn()
@@ -95,7 +66,7 @@ public class XuLyVaCham : MonoBehaviour
         yield return new WaitForSeconds(1.5f);
 
         transform.position = spawnPoint;
-        Hp = 3;
+        Hp = maxHealth;
         heartText.SetText(Hp.ToString());
 
         yield return new WaitForSeconds(0.5f);
