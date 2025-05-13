@@ -6,10 +6,10 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 0
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/karsiori/Scenes/SampleScene - Woods Tileset and Background.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/Main Menu.unity
+    path: Assets/Scenes/MainMenu.unity
     guid: 233cb7deb53520b46972748c5889164f
   - enabled: 1
     path: Assets/Scenes/MathQuest_5.unity
@@ -18,7 +18,10 @@ EditorBuildSettings:
     path: Assets/Scenes/Level_2.unity
     guid: 37c994bd3fa09be4aa12ff13c9aceb64
   - enabled: 1
-    path: Assets/Scenes/Main Menu.unity
+    path: Assets/Scenes/Level_3.unity
+    guid: d182f23ea8f381e4c99136f09d4e1ec9
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
     guid: 233cb7deb53520b46972748c5889164f
   - enabled: 1
     path: Assets/Scenes/LeaderboardScene.unity
