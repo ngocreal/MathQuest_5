@@ -510,6 +510,17 @@ MonoBehaviour:
   anim: {fileID: 39923965}
   attackRange: 1.5
   damage: 1
+--- !u!114 &39923967 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6414750286195332886, guid: 9b81b89dac8349a4284cfc267ac44ded, type: 3}
+  m_PrefabInstance: {fileID: 39923961}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 39923963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a900fd7a7797d3e4abbeaf3b66976809, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &40864752
 GameObject:
   m_ObjectHideFlags: 0
@@ -13162,6 +13173,7 @@ GameObject:
   m_Component:
   - component: {fileID: 482705105}
   - component: {fileID: 482705106}
+  - component: {fileID: 482705107}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -13199,6 +13211,20 @@ MonoBehaviour:
   popUpBox: {fileID: 1377323190}
   animator: {fileID: 1377323192}
   popUpText: {fileID: 1104925065}
+--- !u!114 &482705107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 482705104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29ec01ad04299df4885f6316efd019c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questionDatabase: {fileID: 0}
+  questionSystem: {fileID: 1806240084}
 --- !u!1 &487235286
 GameObject:
   m_ObjectHideFlags: 0
@@ -29614,6 +29640,7 @@ GameObject:
   - component: {fileID: 1377323194}
   - component: {fileID: 1377323192}
   - component: {fileID: 1377323196}
+  - component: {fileID: 1377323197}
   m_Layer: 5
   m_Name: QuestionPanel
   m_TagString: Untagged
@@ -29713,6 +29740,25 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4a1d6b227453cd54796c0f9334658cec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questionText: {fileID: 1104925065}
+  questionImage: {fileID: 501522380}
+  choiceButtons:
+  - {fileID: 983370384}
+  - {fileID: 495226805}
+  - {fileID: 207962302}
+  - {fileID: 713965659}
+--- !u!114 &1377323197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1377323190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe2fd23ca7e767740b8c74a781894807, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   questionText: {fileID: 1104925065}
@@ -34339,6 +34385,70 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1789176100}
   m_CullTransparentMesh: 1
+--- !u!1 &1806240083
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1806240085}
+  - component: {fileID: 1806240084}
+  m_Layer: 0
+  m_Name: MathQuestionSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1806240084
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1806240083}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8703860142fd2648951f95dc6afcfd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questionDatabase:
+  - {fileID: 11400000, guid: e3b2246361cfa414095a8cd9b6ec5a8c, type: 2}
+  - {fileID: 11400000, guid: 650c5928e83c59942a4e213081d3fa50, type: 2}
+  - {fileID: 11400000, guid: 156efe7c93422ec4d8a9c174ea99badc, type: 2}
+  - {fileID: 11400000, guid: 5afb085ebf1504149b8bb0c87b308783, type: 2}
+  - {fileID: 11400000, guid: 05498ce5b9ee3e54586832aa02244d26, type: 2}
+  - {fileID: 11400000, guid: 55fc40ef1eb7d5a419743244245b251a, type: 2}
+  - {fileID: 11400000, guid: 095e378cf69342941984a3f8353a4549, type: 2}
+  - {fileID: 11400000, guid: 2ad9d6779b3e607409bbe03fe731d43c, type: 2}
+  - {fileID: 11400000, guid: a02c0630aea4fb742b67e12b3c2f8463, type: 2}
+  - {fileID: 11400000, guid: 281cc8f9cad24e44e8421afc4c9944df, type: 2}
+  - {fileID: 11400000, guid: 77e3dad9b4a7bd046a0cc8640c83cb1b, type: 2}
+  - {fileID: 11400000, guid: d49673d52cbad1649b9bcfb67679246c, type: 2}
+  - {fileID: 11400000, guid: b1990b677c55ce34ab64faed786614fc, type: 2}
+  - {fileID: 11400000, guid: bf298f690d85e5041873b334a9bd7717, type: 2}
+  - {fileID: 11400000, guid: 923345ec14d00204db61e94ef774de37, type: 2}
+  - {fileID: 11400000, guid: 670b936a6dff8f04bbc9fff1f82d3e63, type: 2}
+  - {fileID: 11400000, guid: a27d636be271f1d46ab7c5e901e96de7, type: 2}
+  questionUI: {fileID: 1377323197}
+  player: {fileID: 39923967}
+--- !u!4 &1806240085
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1806240083}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 901.2091, y: 539.69855, z: -6.8310523}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1818806878
 GameObject:
   m_ObjectHideFlags: 0
@@ -37451,3 +37561,4 @@ SceneRoots:
   - {fileID: 127674320}
   - {fileID: 1139937772}
   - {fileID: 403110}
+  - {fileID: 1806240085}

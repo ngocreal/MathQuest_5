@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcc753a48b7a665489941eb84d0c6d2f, type: 3}
+  m_Name: Quest_06
+  m_EditorClassIdentifier: 
+  questionText: "C\xE2u n\xE0o \u0111\xFAng?"
+  imagePath: Image/c49_htron_1
+  correctAnswer: "Di\u1EC7n t\xEDch ph\u1EA7n t\xF4 m\xE0u b\u1EB1ng 0,4 di\u1EC7n
+    t\xEDch h\xECnh tr\xF2n."
+  isMultipleChoice: 1
+  choices:
+  - "Di\u1EC7n t\xEDch h\xECnh tr\xF2n g\u1EA5p 4 l\u1EA7n di\u1EC7n t\xEDch ph\u1EA7n
+    t\xF4 m\xE0u."
+  - "Di\u1EC7n t\xEDch ph\u1EA7n t\xF4 m\xE0u b\u1EB1ng 1/5 di\u1EC7n t\xEDch h\xECnh
+    tr\xF2n."
+  - "Di\u1EC7n t\xEDch ph\u1EA7n t\xF4 m\xE0u b\u1EB1ng 0,4 di\u1EC7n t\xEDch h\xECnh
+    tr\xF2n."
+  - "T\u1EA5t c\u1EA3 \u0111\u1EC1u sai."
+  difficulty: 3
+  pointsReward: 25

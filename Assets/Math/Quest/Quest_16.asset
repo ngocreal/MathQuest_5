@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcc753a48b7a665489941eb84d0c6d2f, type: 3}
+  m_Name: Quest_16
+  m_EditorClassIdentifier: 
+  questionText: "S\u1ED1 57 308. Vi\u1EBFt l\xE0?"
+  imagePath: 
+  correctAnswer: "N\u0103m m\u01B0\u01A1i b\u1EA3y ngh\xECn ba tr\u0103m linh t\xE1m"
+  isMultipleChoice: 1
+  choices:
+  - "N\u0103m ngh\xECn b\u1EA3y tr\u0103m ba m\u01B0\u01A1i t\xE1m"
+  - "N\u0103m tr\u0103m b\u1EA3y m\u01B0\u01A1i ngh\xECn ba tr\u0103m linh t\xE1m"
+  - "N\u0103m m\u01B0\u01A1i b\u1EA3y ngh\xECn t\xE1m tr\u0103m linh ba"
+  - "N\u0103m m\u01B0\u01A1i b\u1EA3y ngh\xECn ba tr\u0103m linh t\xE1m"
+  difficulty: 1
+  pointsReward: 5

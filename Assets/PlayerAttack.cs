@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour
 {
@@ -18,7 +18,7 @@ public class PlayerAttack : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Q))
             {
                 anim.SetTrigger("TanCong");
-                Attack(); 
+                Attack();
                 timeBtwAttack = startTimeBtwAttack;
             }
         }
@@ -30,6 +30,7 @@ public class PlayerAttack : MonoBehaviour
 
     void Attack()
     {
+        Debug.Log("Tấn công!");
         Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnemies);
         foreach (Collider2D enemy in enemiesToDamage)
         {
@@ -37,6 +38,14 @@ public class PlayerAttack : MonoBehaviour
             if (enemyScript != null)
             {
                 enemyScript.TakeDamage(damage);
+                if (GameManager.Instance != null)
+                {
+                    GameManager.Instance.TriggerQuestion(enemy.gameObject);
+                }
+                else
+                {
+                    Debug.LogError("GameManager.Instance is null!");
+                }
             }
         }
     }

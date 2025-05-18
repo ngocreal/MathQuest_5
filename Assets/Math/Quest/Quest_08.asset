@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcc753a48b7a665489941eb84d0c6d2f, type: 3}
+  m_Name: Quest_08
+  m_EditorClassIdentifier: 
+  questionText: "M\u1ED9t m\u1EA3nh v\u01B0\u1EDDn d\u1EA1ng h\xECnh thang c\xF3
+    \u0111\u1ED9 d\xE0i hai \u0111\xE1y l\xE0 24 m v\xE0 18 m, chi\u1EC1u cao l\xE0
+    12 m. Bi\u1EBFt r\u1EB1ng 2/5 di\u1EC7n t\xEDch v\u01B0\u1EDDn \u0111\u1EC3 tr\u1ED3ng
+    hoa c\xFAc, ph\u1EA7n c\xF2n l\u1EA1i \u0111\u1EC3 tr\u1ED3ng hoa h\u1ED3ng.
+    H\u1ECFi di\u1EC7n t\xEDch tr\u1ED3ng hoa h\u1ED3ng l\xE0 bao nhi\xEAu m\xE9t
+    vu\xF4ng?"
+  imagePath: 
+  correctAnswer: 151,2 m2
+  isMultipleChoice: 1
+  choices:
+  - 151,2 m2
+  - 100,8 m2
+  - 252 m2
+  - 150 m2
+  difficulty: 3
+  pointsReward: 25

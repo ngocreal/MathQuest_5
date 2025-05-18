@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcc753a48b7a665489941eb84d0c6d2f, type: 3}
+  m_Name: Quest_01
+  m_EditorClassIdentifier: 
+  questionText: "M\u1ED9t s\xE2n b\xF3ng \u0111\xE1 d\u1EA1ng h\xECnh ch\u1EEF nh\u1EADt
+    c\xF3 chu vi 346 m, chi\u1EC1u d\xE0i h\u01A1n chi\u1EC1u r\u1ED9ng l\xE0 37
+    m. Chi\u1EC1u r\u1ED9ng s\xE2n b\xF3ng \u0111\xE1 l\xE0?"
+  imagePath: 
+  correctAnswer: 68
+  isMultipleChoice: 1
+  choices:
+  - 68
+  - 60
+  - 450
+  - 90
+  difficulty: 2
+  pointsReward: 15

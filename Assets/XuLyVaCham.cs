@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class XuLyVaCham : MonoBehaviour
 {
-    public int Hp = 2;
+    public int Hp = 3;
     public int maxHealth = 3;
     public int Star = 0;
     public TextMeshProUGUI heartText;
@@ -21,15 +21,24 @@ public class XuLyVaCham : MonoBehaviour
         heartText.SetText(Hp.ToString());
     }
 
-    private void OnTriggerEnter2D(Collider2D colision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (colision.CompareTag("Vang"))
+        Debug.Log($"Va chạm với: {collision.tag}");
+        if (collision.CompareTag("Vang"))
         {
             Star++;
             StarText.SetText(Star.ToString());
-            Destroy(colision.gameObject);
+            Destroy(collision.gameObject);
+            if (GameManager.Instance != null)
+            {
+                GameManager.Instance.TriggerQuestion(collision.gameObject);
+            }
+            else
+            {
+                Debug.LogError("GameManager.Instance is null!");
+            }
         }
-        else if (colision.CompareTag("GaiNhon") || colision.CompareTag("enemy"))
+        else if (collision.CompareTag("GaiNhon") || collision.CompareTag("enemy"))
         {
             Hp--;
             heartText.SetText(Hp.ToString());
@@ -65,13 +74,6 @@ public class XuLyVaCham : MonoBehaviour
 
         yield return new WaitForSeconds(1.5f);
 
-        transform.position = spawnPoint;
-        Hp = maxHealth;
-        heartText.SetText(Hp.ToString());
-
-        yield return new WaitForSeconds(0.5f);
-
-        isDead = false;
-        playerController.canMove = true;
+        UnityEngine.SceneManagement.SceneManager.LoadScene("MenuMain");
     }
 }

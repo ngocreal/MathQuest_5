@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcc753a48b7a665489941eb84d0c6d2f, type: 3}
+  m_Name: Quest_04
+  m_EditorClassIdentifier: 
+  questionText: "34,012. Ch\u1EEF s\u1ED1 4 thu\u1ED9c h\xE0ng ..."
+  imagePath: 
+  correctAnswer: "h\xE0ng \u0111\u01A1n v\u1ECB"
+  isMultipleChoice: 1
+  choices:
+  - "h\xE0ng \u0111\u01A1n v\u1ECB"
+  - "h\xE0ng ph\u1EA7n m\u01B0\u1EDDi"
+  - "h\xE0ng ph\u1EA7n ngh\xECn"
+  - "h\xE0ng ph\u1EA7n ch\u1EE5c"
+  difficulty: 1
+  pointsReward: 5
