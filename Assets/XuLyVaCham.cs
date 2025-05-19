@@ -74,6 +74,15 @@ public class XuLyVaCham : MonoBehaviour
 
         yield return new WaitForSeconds(1.5f);
 
+        transform.position = spawnPoint;
+        Hp = maxHealth;
+        heartText.SetText(Hp.ToString());
+
+        yield return new WaitForSeconds(0.5f);
+
+        isDead = false;
+        playerController.canMove = true;
+
         UnityEngine.SceneManagement.SceneManager.LoadScene("MenuMain");
     }
 }

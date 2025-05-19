@@ -45,7 +45,6 @@ GameObject:
   - component: {fileID: 1159326162728652754}
   - component: {fileID: 6847087397671922880}
   - component: {fileID: 5940579447478523019}
-  - component: {fileID: 2047841461818336340}
   - component: {fileID: 8987425973138769566}
   - component: {fileID: 6414750286195332886}
   m_Layer: 0
@@ -237,25 +236,15 @@ MonoBehaviour:
   anim: {fileID: 6847087397671922880}
   tocDo: 4
   lucNhay: 6
+  fallDetector: {fileID: 0}
   _duocPhepNhay: {fileID: 3027622542122540632}
   san:
     serializedVersion: 2
     m_Bits: 128
   traiPhai: 0
   isfacingRight: 1
---- !u!114 &2047841461818336340
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8667060439267021915}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad6a3b621c475644398618f0c3073d76, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dichchuyen: {fileID: 0}
+  SmokeFX: {fileID: 0}
+  canMove: 1
 --- !u!114 &8987425973138769566
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -282,6 +271,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Hp: 3
+  maxHealth: 3
   Star: 0
   heartText: {fileID: 0}
   StarText: {fileID: 0}
+  animator: {fileID: 0}
+  playerController: {fileID: 0}
