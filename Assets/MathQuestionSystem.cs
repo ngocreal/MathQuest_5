@@ -7,6 +7,7 @@ public class MathQuestionSystem : MonoBehaviour
     [SerializeField] private List<Quest> questionDatabase;
     [SerializeField] private QuestUI questionUI;
     [SerializeField] private XuLyVaCham player;
+    private Chest chest;
     private int currentPlayerPoints = 0;
     private Quest currentQuestion;
     private PopUpSystem popUpSystem; 
@@ -37,7 +38,7 @@ public class MathQuestionSystem : MonoBehaviour
             ShowQuestion(1);
     }
 
-    private void ShowQuestion(int difficulty)
+    public void ShowQuestion(int difficulty)
     {
         Debug.Log($"ShowQuestion gọi với difficulty: {difficulty}");
         List<Quest> availableQuestions = questionDatabase.FindAll(q => q.difficulty == difficulty);
@@ -69,6 +70,7 @@ public class MathQuestionSystem : MonoBehaviour
         questionUI.gameObject.SetActive(true); // Đảm bảo UI đc kích hoạt
         questionUI.SetQuestion(currentQuestion);
         Debug.Log($"Hiển thị câu hỏi: {currentQuestion.questionText}");
+
     }
 
     public void CheckAnswer(string selectedAnswer)
@@ -112,5 +114,65 @@ public class MathQuestionSystem : MonoBehaviour
         }
     }
 
+
+    public string GetSimpleQuestionText()
+    {
+        // Chọn câu hỏi cấp độ 1 (dễ)
+        List<Quest> easyQuestions = questionDatabase.FindAll(q => q.difficulty == 1);
+        if (easyQuestions.Count == 0)
+        {
+            Debug.LogWarning("Không có câu hỏi dễ để hiện popup!");
+            return "Không có câu hỏi.";
+        }
+
+        Quest popupQuestion = easyQuestions[Random.Range(0, easyQuestions.Count)];
+        string message = $"Câu hỏi: {popupQuestion.questionText}\nĐáp án đúng: {popupQuestion.correctAnswer}";
+        return message;
+    }
+
+    public Quest ShowQuestionAndReturn(int difficulty)
+    {
+        Debug.Log($"ShowQuestionAndReturn gọi với difficulty: {difficulty}");
+        List<Quest> availableQuestions = questionDatabase.FindAll(q => q.difficulty == difficulty);
+        if (availableQuestions.Count == 0)
+        {
+            Debug.LogWarning($"Không có câu hỏi cấp {difficulty}!");
+            return null;
+        }
+
+        currentQuestion = availableQuestions[Random.Range(0, availableQuestions.Count)];
+        if (questionUI == null)
+        {
+            Debug.LogError("questionUI là null!");
+            return null;
+        }
+
+        questionUI.gameObject.SetActive(true);
+        questionUI.SetQuestion(currentQuestion);
+        Debug.Log($"Đã kích hoạt QuestionUI với: {currentQuestion.questionText}");
+
+        return currentQuestion;
+    }
+
+    private void GiveRewardItem()
+    {
+        // Bạn có thể random hoặc cố định item
+        string rewardedItemName = "Chocolate Sữa";
+        int rewardedQuantity = 1;
+        Sprite rewardedSprite = Resources.Load<Sprite>("Sprites/Chocolate Sữa"); // phải khớp tên trong thư mục Resources
+        string rewardedDescription = "Restores a small amount of health.";
+
+        // Gọi tới menucontroller để add item
+        menucontroller menu = GameObject.Find("UI").GetComponent<menucontroller>();
+        if (menu != null)
+        {
+            menu.AddItem(rewardedItemName, rewardedQuantity, rewardedSprite, rewardedDescription);
+            Debug.Log($"Thưởng vật phẩm: {rewardedItemName}");
+        }
+        else
+        {
+            Debug.LogError("Không tìm thấy menucontroller để thêm item!");
+        }
+    }
 
 }
