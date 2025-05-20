@@ -10,7 +10,7 @@ public class MathQuestionSystem : MonoBehaviour
     private Chest chest;
     private int currentPlayerPoints = 0;
     private Quest currentQuestion;
-    private PopUpSystem popUpSystem; 
+    private PopUpSystem popUpSystem;
 
     void Start()
     {
@@ -19,7 +19,7 @@ public class MathQuestionSystem : MonoBehaviour
         if (questionUI == null) Debug.LogError("QuestionUI không được gán!");
         if (questionDatabase == null || questionDatabase.Count == 0) Debug.LogError("QuestionDatabase trống hoặc null!");
         player.StarText.text = currentPlayerPoints.ToString();
-        popUpSystem = FindFirstObjectByType<PopUpSystem>(); 
+        popUpSystem = FindFirstObjectByType<PopUpSystem>();
         if (popUpSystem == null) Debug.LogError("PopUpSystem không được tìm thấy!");
     }
 
@@ -41,7 +41,11 @@ public class MathQuestionSystem : MonoBehaviour
     public void ShowQuestion(int difficulty)
     {
         Debug.Log($"ShowQuestion gọi với difficulty: {difficulty}");
-        List<Quest> availableQuestions = questionDatabase.FindAll(q => q.difficulty == difficulty);
+
+        // tránh lặp lại câu hỏi hiện tại
+        List<Quest> availableQuestions = questionDatabase.FindAll(q =>
+            q.difficulty == difficulty && q != currentQuestion); 
+
         Debug.Log($"Câu hỏi cấp {difficulty}, số lượng: {availableQuestions.Count}");
         if (availableQuestions.Count == 0)
         {
@@ -55,7 +59,10 @@ public class MathQuestionSystem : MonoBehaviour
             Debug.LogError("questionUI là null!");
             return;
         }
-        // popup trước khi hiển thị UI
+
+        // bật chế độ đang làm bài, chặn va chạm
+        player.isAnsweringQuestion = true;
+
         if (popUpSystem != null)
         {
             string popupText = $"Câu hỏi cấp {difficulty}: {currentQuestion.questionText}\nĐáp án: {string.Join(", ", currentQuestion.choices)}";
@@ -66,11 +73,11 @@ public class MathQuestionSystem : MonoBehaviour
         {
             Debug.LogWarning("PopUpSystem null, không hiển thị popup!");
         }
+
         Debug.Log($"Kích hoạt QuestionUI với câu hỏi: {currentQuestion.questionText}");
         questionUI.gameObject.SetActive(true); // Đảm bảo UI đc kích hoạt
         questionUI.SetQuestion(currentQuestion);
         Debug.Log($"Hiển thị câu hỏi: {currentQuestion.questionText}");
-
     }
 
     public void CheckAnswer(string selectedAnswer)
@@ -85,39 +92,41 @@ public class MathQuestionSystem : MonoBehaviour
             player.StarText.text = currentPlayerPoints.ToString();
             Debug.Log($"Đúng! +{reward} điểm");
 
-            questionUI.gameObject.SetActive(false); //
+            questionUI.gameObject.SetActive(false);
             if (popUpSystem != null)
             {
-                popUpSystem.popUpBox.SetActive(false); //Ẩn po nếu đang hiển thị
+                popUpSystem.popUpBox.SetActive(false);
             }
+
+            // Thoát chế độ làm bài
+            player.isAnsweringQuestion = false;
         }
         else
         {
-            player.Hp--; // Trừ máu
+            player.Hp--;
             player.heartText.text = player.Hp.ToString();
             Debug.Log($"Sai! Mất 1 máu, còn lại: {player.Hp}");
 
             if (player.Hp <= 0)
             {
                 Debug.Log("HP = 0, quay về menu");
-                SceneManager.LoadScene("MenuScene");
+                SceneManager.LoadScene("MainMenu");
                 return;
             }
 
-            questionUI.gameObject.SetActive(false); // Tắt UI cũ trước
+            questionUI.gameObject.SetActive(false);
             if (popUpSystem != null)
             {
-                popUpSystem.popUpBox.SetActive(false); //Tắt po cũ
+                popUpSystem.popUpBox.SetActive(false);
             }
 
-            ShowQuestion(currentQuestion.difficulty); //Gọi câu hỏi mới
+            // Gọi câu hỏi mới nếu còn HP, vẫn giữ currentQuestion để so sánh
+            ShowQuestion(currentQuestion.difficulty);
         }
     }
 
-
     public string GetSimpleQuestionText()
     {
-        // Chọn câu hỏi cấp độ 1 (dễ)
         List<Quest> easyQuestions = questionDatabase.FindAll(q => q.difficulty == 1);
         if (easyQuestions.Count == 0)
         {
@@ -156,13 +165,11 @@ public class MathQuestionSystem : MonoBehaviour
 
     private void GiveRewardItem()
     {
-        // Bạn có thể random hoặc cố định item
         string rewardedItemName = "Chocolate Sữa";
         int rewardedQuantity = 1;
-        Sprite rewardedSprite = Resources.Load<Sprite>("Sprites/Chocolate Sữa"); // phải khớp tên trong thư mục Resources
+        Sprite rewardedSprite = Resources.Load<Sprite>("Sprites/Chocolate Sữa");
         string rewardedDescription = "Restores a small amount of health.";
 
-        // Gọi tới menucontroller để add item
         menucontroller menu = GameObject.Find("UI").GetComponent<menucontroller>();
         if (menu != null)
         {
@@ -174,5 +181,4 @@ public class MathQuestionSystem : MonoBehaviour
             Debug.LogError("Không tìm thấy menucontroller để thêm item!");
         }
     }
-
 }

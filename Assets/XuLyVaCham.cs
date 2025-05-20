@@ -13,7 +13,7 @@ public class XuLyVaCham : MonoBehaviour
     public Dc playerController;
     private Vector2 spawnPoint;
     private bool isDead = false;
-
+    public bool isAnsweringQuestion = false; //trạng thái đang hoạt động
     void Start()
     {
         spawnPoint = transform.position;
@@ -23,6 +23,7 @@ public class XuLyVaCham : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (isAnsweringQuestion) return;
         Debug.Log($"Va chạm với: {collision.tag}");
         if (collision.CompareTag("Vang"))
         {

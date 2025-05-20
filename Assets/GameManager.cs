@@ -26,11 +26,33 @@ public class GameManager : MonoBehaviour
                 DontDestroyOnLoad(gameObject);
             }
         }
+
+        // tự động gán questionSystem nếu chưa có
+        if (questionSystem == null)
+        {
+            questionSystem = FindFirstObjectByType<MathQuestionSystem>();
+            if (questionSystem == null)
+            {
+                Debug.LogError("Không tìm thấy MathQuestionSystem trong scene!");
+            }
+            else
+            {
+                Debug.Log("Đã tự động gán MathQuestionSystem cho GameManager.");
+            }
+        }
     }
 
     public void TriggerQuestion(GameObject triggerObject)
     {
         Debug.Log($"TriggerQuestion gọi cho: {triggerObject.tag}");
+
+        // kiểm tra null
+        if (questionSystem == null)
+        {
+            Debug.LogError("questionSystem chưa được gán! Không thể cộng điểm.");
+            return;
+        }
+
         int difficulty = 1;
         if (triggerObject.CompareTag("enemy"))
         {
