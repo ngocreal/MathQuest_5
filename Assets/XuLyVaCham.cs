@@ -28,6 +28,7 @@ public class XuLyVaCham : MonoBehaviour
         {
             Star++;
             StarText.SetText(Star.ToString());
+            SoundEffectManager.Play("Star");
             Destroy(collision.gameObject);
             if (GameManager.Instance != null)
             {
@@ -45,6 +46,7 @@ public class XuLyVaCham : MonoBehaviour
 
             if (Hp > 0)
             {
+                SoundEffectManager.Play("PlayerHurt");
                 animator.SetTrigger("Hurt");
             }
 

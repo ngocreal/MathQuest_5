@@ -3,17 +3,32 @@
 public class Chest : MonoBehaviour
 {
     public PopUpSystem popUpSystem;
-    public string message = "Câu hỏi 1: Số 57 308. Viết là?";
     private bool isPlayerNearby = false;
+    private MathQuestionSystem mathQuestionSystem;
+
+    void Start()
+    {
+        mathQuestionSystem = FindFirstObjectByType<MathQuestionSystem>();
+        if (mathQuestionSystem == null)
+            Debug.LogError("MathQuestionSystem not found!");
+        Time.timeScale = 1;
+    }
 
     void Update()
     {
         if (isPlayerNearby && Input.GetKeyDown(KeyCode.E))
         {
             Debug.Log("E pressed near chest");
-            popUpSystem.PopUp(message);
+
+            Quest selectedQuest = mathQuestionSystem.ShowQuestionAndReturn(1); // Lấy câu hỏi cấp 1
+            if (selectedQuest != null)
+            {
+                string popupText = $"Câu hỏi: {selectedQuest.questionText}\n(Chọn đáp án đúng bên dưới)";
+                popUpSystem.PopUp(popupText); // Chỉ để minh họa câu hỏi, trả lời bằng UI
+            }
         }
     }
+
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -31,4 +46,3 @@ public class Chest : MonoBehaviour
         }
     }
 }
-

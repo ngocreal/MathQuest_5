@@ -7,8 +7,13 @@ public class MathQuestionSystem : MonoBehaviour
     [SerializeField] private List<Quest> questionDatabase;
     [SerializeField] private QuestUI questionUI;
     [SerializeField] private XuLyVaCham player;
+    private Chest chest;
     private int currentPlayerPoints = 0;
     private Quest currentQuestion;
+    private bool isActive;
+    public ItemSO rewardItemSO; // Tham chiếu đến ScriptableObject Chocolate Sữa
+    public Sprite rewardSprite; // Sprite cho item hiển thị trong inventory
+
 
     void Start()
     {
@@ -34,7 +39,7 @@ public class MathQuestionSystem : MonoBehaviour
             ShowQuestion(1);
     }
 
-    private void ShowQuestion(int difficulty)
+    public void ShowQuestion(int difficulty)
     {
         Debug.Log($"ShowQuestion gọi với difficulty: {difficulty}");
         List<Quest> availableQuestions = questionDatabase.FindAll(q => q.difficulty == difficulty);
@@ -55,20 +60,34 @@ public class MathQuestionSystem : MonoBehaviour
         questionUI.gameObject.SetActive(true);
         questionUI.SetQuestion(currentQuestion);
         Debug.Log($"Hiển thị câu hỏi: {currentQuestion.questionText}");
+
     }
 
     public void CheckAnswer(string selectedAnswer)
     {
         Debug.Log($"CheckAnswer với: {selectedAnswer}");
         bool isCorrect = selectedAnswer == currentQuestion.correctAnswer;
+
         if (isCorrect)
         {
+            SoundEffectManager.Play("Correct"); // ✅ Play đúng
             currentPlayerPoints += currentQuestion.pointsReward;
             player.StarText.text = currentPlayerPoints.ToString();
             Debug.Log($"Đúng! +{currentQuestion.pointsReward} điểm");
+
+            menucontroller menu = GameObject.Find("UI").GetComponent<menucontroller>();
+
+            menu.AddItem(
+                rewardItemSO.itemName,
+                1,
+                rewardSprite,
+                rewardItemSO.attributesToChange.ToString()
+            );
+
         }
         else
         {
+            SoundEffectManager.Play("InCorrect"); // ❌ Play sai
             player.Hp--;
             player.heartText.text = player.Hp.ToString();
             Debug.Log("Sai! Mất 1 cơ hội");
@@ -84,4 +103,66 @@ public class MathQuestionSystem : MonoBehaviour
 
         questionUI.gameObject.SetActive(false);
     }
+
+
+    public string GetSimpleQuestionText()
+    {
+        // Chọn câu hỏi cấp độ 1 (dễ)
+        List<Quest> easyQuestions = questionDatabase.FindAll(q => q.difficulty == 1);
+        if (easyQuestions.Count == 0)
+        {
+            Debug.LogWarning("Không có câu hỏi dễ để hiện popup!");
+            return "Không có câu hỏi.";
+        }
+
+        Quest popupQuestion = easyQuestions[Random.Range(0, easyQuestions.Count)];
+        string message = $"Câu hỏi: {popupQuestion.questionText}\nĐáp án đúng: {popupQuestion.correctAnswer}";
+        return message;
+    }
+
+    public Quest ShowQuestionAndReturn(int difficulty)
+    {
+        Debug.Log($"ShowQuestionAndReturn gọi với difficulty: {difficulty}");
+        List<Quest> availableQuestions = questionDatabase.FindAll(q => q.difficulty == difficulty);
+        if (availableQuestions.Count == 0)
+        {
+            Debug.LogWarning($"Không có câu hỏi cấp {difficulty}!");
+            return null;
+        }
+
+        currentQuestion = availableQuestions[Random.Range(0, availableQuestions.Count)];
+        if (questionUI == null)
+        {
+            Debug.LogError("questionUI là null!");
+            return null;
+        }
+
+        questionUI.gameObject.SetActive(true);
+        questionUI.SetQuestion(currentQuestion);
+        Debug.Log($"Đã kích hoạt QuestionUI với: {currentQuestion.questionText}");
+
+        return currentQuestion;
+    }
+
+    private void GiveRewardItem()
+    {
+        // Bạn có thể random hoặc cố định item
+        string rewardedItemName = "Chocolate Sữa";
+        int rewardedQuantity = 1;
+        Sprite rewardedSprite = Resources.Load<Sprite>("Sprites/Chocolate Sữa"); // phải khớp tên trong thư mục Resources
+        string rewardedDescription = "Restores a small amount of health.";
+
+        // Gọi tới menucontroller để add item
+        menucontroller menu = GameObject.Find("UI").GetComponent<menucontroller>();
+        if (menu != null)
+        {
+            menu.AddItem(rewardedItemName, rewardedQuantity, rewardedSprite, rewardedDescription);
+            Debug.Log($"Thưởng vật phẩm: {rewardedItemName}");
+        }
+        else
+        {
+            Debug.LogError("Không tìm thấy menucontroller để thêm item!");
+        }
+    }
+
 }
