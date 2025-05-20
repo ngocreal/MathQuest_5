@@ -80,6 +80,7 @@ public class MathQuestionSystem : MonoBehaviour
         Debug.Log($"Hiển thị câu hỏi: {currentQuestion.questionText}");
     }
 
+    [SerializeField] private string currentLevelName = "Level1";
     public void CheckAnswer(string selectedAnswer)
     {
         Debug.Log($"CheckAnswer với: {selectedAnswer}");
@@ -100,6 +101,8 @@ public class MathQuestionSystem : MonoBehaviour
 
             // Thoát chế độ làm bài
             player.isAnsweringQuestion = false;
+            SaveAnswerResult(currentLevelName, isCorrect);
+            Debug.Log("Số câu đúng " + currentLevelName + ": " + PlayerPrefs.GetInt(currentLevelName + "_Correct", 0));
         }
         else
         {
@@ -122,6 +125,8 @@ public class MathQuestionSystem : MonoBehaviour
 
             // Gọi câu hỏi mới nếu còn HP, vẫn giữ currentQuestion để so sánh
             ShowQuestion(currentQuestion.difficulty);
+            SaveAnswerResult(currentLevelName, isCorrect);
+            Debug.Log("Số câu sai Level1: " + PlayerPrefs.GetInt("Level1_Incorrect", 0));
         }
     }
 
@@ -181,4 +186,13 @@ public class MathQuestionSystem : MonoBehaviour
             Debug.LogError("Không tìm thấy menucontroller để thêm item!");
         }
     }
+
+    public void SaveAnswerResult(string levelName, bool isCorrect)
+    {
+        string key = levelName + (isCorrect ? "_Correct" : "_Incorrect");
+        int current = PlayerPrefs.GetInt(key, 0);
+        PlayerPrefs.SetInt(key, current + 1); // tăng lên 1
+        PlayerPrefs.Save(); // đảm bảo ghi đĩa
+    }
+
 }
