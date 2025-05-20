@@ -23,6 +23,7 @@ public class menucontroller : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.I)) 
         {
             bool isActive = !menuCanvas.activeSelf;
+            SoundEffectManager.Play("Book");
             menuCanvas.SetActive(isActive);
             Time.timeScale = isActive ? 0 : 1;
         }
@@ -44,15 +45,32 @@ public class menucontroller : MonoBehaviour
 
     public void AddItem(string itemName, int quantity, Sprite itemSprite, string itemDescription)
     {
-        for (int i = 0; i < itemSlot.Length; i++) 
+        // 1. Tìm slot đã có cùng item để cộng dồn
+        for (int i = 0; i < itemSlot.Length; i++)
         {
-            if (itemSlot[i].isFull == false)
+            if (itemSlot[i].isFull && itemSlot[i].itemName == itemName)
             {
-                itemSlot[i].AddItem(itemName, quantity, itemSprite, itemDescription);
+                itemSlot[i].quantity += quantity;
+                itemSlot[i].UpdateQuantity(quantity); // nếu biến quantity có tồn tại ở hàm đó
+                Debug.Log($"Đã cộng thêm {quantity} {itemName} vào slot hiện có.");
                 return;
             }
         }
+
+        // 2. Nếu chưa có, tìm slot trống để thêm mới
+        for (int i = 0; i < itemSlot.Length; i++)
+        {
+            if (!itemSlot[i].isFull)
+            {
+                itemSlot[i].AddItem(itemName, quantity, itemSprite, itemDescription);
+                Debug.Log($"Đã thêm mới {itemName} vào slot {i}.");
+                return;
+            }
+        }
+
+        Debug.LogWarning("Không còn chỗ trống trong inventory!");
     }
+
 
     public void DeselectAllSlot()
     {

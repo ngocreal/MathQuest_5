@@ -1,3 +1,4 @@
+using System;
 using System.Collections; 
 using System.Collections.Generic; 
 using TMPro; 
@@ -13,4 +14,5 @@ public class PopUpSystem : MonoBehaviour
         popUpText.text = text;
         animator.SetTrigger("PopUp");
     }
+
 }

@@ -93,6 +93,12 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler
         
     }
 
+    public void UpdateQuantity(int newQuantity)
+    {
+        this.quantity = newQuantity;
+        quantityText.text = quantity.ToString();
+    }
+
     private void EmptySlot()
     {
        quantityText.enabled = false;
