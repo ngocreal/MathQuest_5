@@ -12,23 +12,15 @@ public class QuestUI : MonoBehaviour
     private void Awake()
     {
         questionSystem = FindFirstObjectByType<MathQuestionSystem>();
-        Debug.Log("QuestUI Awake, questionSystem: " + (questionSystem != null ? "found" : "null") + ", gameObject active: " + gameObject.activeSelf);
-    }
-
-    private void Start()
-    {
-        Debug.Log("QuestUI Start, panel active: " + gameObject.activeSelf);
+        Canvas canvas = GetComponentInParent<Canvas>();
+        Debug.Log("QuestUI Awake, gameObject active: " + gameObject.activeSelf + ", Canvas active: " + (canvas != null ? canvas.gameObject.activeSelf : "no canvas") + ", Canvas scaleFactor: " + (canvas != null ? canvas.scaleFactor : 0));
     }
 
     public void SetQuestion(Quest question)
     {
-        Debug.Log($"SetQuestion gọi với: {question.questionText}, panel active: {gameObject.activeSelf}");
+        Debug.Log("SetQuestion called, panel active: " + gameObject.activeSelf);
         if (questionText == null) Debug.LogError("questionText is null!");
-        else
-        {
-            questionText.text = question.questionText;
-            Debug.Log("questionText set to: " + question.questionText + ", text active: " + questionText.gameObject.activeSelf);
-        }
+        else questionText.text = question.questionText;
 
         questionImage.gameObject.SetActive(!string.IsNullOrEmpty(question.imagePath));
         if (!string.IsNullOrEmpty(question.imagePath))
@@ -42,7 +34,7 @@ public class QuestUI : MonoBehaviour
         {
             if (i < question.choices.Length)
             {
-                if (choiceButtons[i] == null) Debug.LogError($"choiceButtons[{i}] is null!");
+                if (choiceButtons[i] == null) Debug.LogError("choiceButtons[" + i + "] is null!");
                 else
                 {
                     choiceButtons[i].GetComponentInChildren<TextMeshProUGUI>().text = question.choices[i];
@@ -50,7 +42,6 @@ public class QuestUI : MonoBehaviour
                     choiceButtons[i].onClick.RemoveAllListeners();
                     choiceButtons[i].onClick.AddListener(() => questionSystem.CheckAnswer(question.choices[index]));
                     choiceButtons[i].gameObject.SetActive(true);
-                    Debug.Log($"Button {i} set to: {question.choices[i]}, button active: {choiceButtons[i].gameObject.activeSelf}");
                 }
             }
             else

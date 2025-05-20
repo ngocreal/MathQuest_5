@@ -57,13 +57,13 @@ public class GameManager : MonoBehaviour
         if (triggerObject.CompareTag("enemy"))
         {
             difficulty = 2;
-            Debug.Log("Cộng 4 điểm cho enemy");
+            Debug.Log("giết quái +4 điểm");
             questionSystem.AddPoints(4);
         }
         else if (triggerObject.CompareTag("Vang"))
         {
             difficulty = 1;
-            Debug.Log("Cộng 1 điểm cho Vang");
+            Debug.Log("+1 điểm cho Vang");
             questionSystem.AddPoints(1);
         }
     }
