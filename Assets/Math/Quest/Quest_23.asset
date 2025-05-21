@@ -10,16 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fcc753a48b7a665489941eb84d0c6d2f, type: 3}
-  m_Name: Quest_07
+  m_Name: Quest_23
   m_EditorClassIdentifier: 
-  questionText: "17 \xD7 (730 + 270) = ?"
+  questionText: "Chia 9 kg g\u1EA1o v\xE0o c\xE1c t\xFAi, m\u1ED7i t\xFAi ch\u1EE9a
+    1,5 kg g\u1EA1o th\xEC \u0111\u01B0\u1EE3c bao nhi\xEAu t\xFAi?"
   imagePath: 
-  correctAnswer: 17000
+  correctAnswer: "6 t\xFAi"
   isMultipleChoice: 1
   choices:
-  - 17000
-  - 15404
-  - 13104
-  - 12680
+  - "5 t\xFAi"
+  - "6 t\xFAi"
+  - "7 t\xFAi"
+  - "12 t\xFAi"
   difficulty: 2
-  pointsReward: 25
+  pointsReward: 15

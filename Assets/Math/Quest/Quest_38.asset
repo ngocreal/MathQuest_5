@@ -10,16 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fcc753a48b7a665489941eb84d0c6d2f, type: 3}
-  m_Name: Quest_07
+  m_Name: Quest_38
   m_EditorClassIdentifier: 
-  questionText: "17 \xD7 (730 + 270) = ?"
+  questionText: "M\u1ED9t th\u1EEDa ru\u1ED9ng d\u1EA1ng h\xECnh ch\u1EEF nh\u1EADt
+    c\xF3 chi\u1EC1u d\xE0i 250 m, chi\u1EC1u r\u1ED9ng 75 m. Di\u1EC7n t\xEDch c\u1EE7a
+    th\u1EEDa ru\u1ED9ng \u0111\xF3 l\xE0 .?. ha."
   imagePath: 
-  correctAnswer: 17000
+  correctAnswer: 1,875
   isMultipleChoice: 1
   choices:
-  - 17000
-  - 15404
-  - 13104
-  - 12680
-  difficulty: 2
+  - 1,875
+  - 25750
+  - 1,255
+  - 18750
+  difficulty: 3
   pointsReward: 25

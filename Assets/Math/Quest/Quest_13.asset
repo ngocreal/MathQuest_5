@@ -12,14 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcc753a48b7a665489941eb84d0c6d2f, type: 3}
   m_Name: Quest_13
   m_EditorClassIdentifier: 
-  questionText: 
-  imagePath: Image/c2_phanso_6.2
-  correctAnswer: "A v\xE0 B"
+  questionText: "V\xED d\u1EE5 612 dm = 612/10 m = 61/2/10 m c\xF3 h\u1ED7n s\u1ED1
+    l\xE0 61, t\u1EED s\u1ED1 2, m\u1EABu s\u1ED1 10. T\u01B0\u01A1ng t\u1EF1 s\u1ED1
+    \u0111o d\u01B0\u1EDBi d\u1EA1ng h\u1ED7n s\u1ED1 c\u1EE7a 7 km 7 m= .?. km"
+  imagePath: 
+  correctAnswer: 7/7/1000
   isMultipleChoice: 1
   choices:
-  - "A v\xE0 B"
-  - "A v\xE0 C"
-  - "D v\xE0 C"
-  - "D v\xE0 B"
+  - 7/8/1000
+  - 8/7/1000
+  - 7/7/1000
+  - 4/7/1000
   difficulty: 2
   pointsReward: 15

@@ -523,7 +523,7 @@
             "difficulty": 1
         },
         {
-            "questionText": "Người ta dùng các tấm kính hình vuông cạnh 1 phần 4 m lắp sát nhau thành một vách ngăn hình chữ nhật có chiều dài 5 m và chiều rộng 4 m. Diện tích của một tấm kính hình vuông là ... m vuông?",
+            "questionText": "Người ta dùng các tấm kính hình vuông cạnh 1 phần 4 m lắp sát nhau thành một vách ngăn hình chữ nhật có chiều dài 5 m và chiều rộng 4 m. Diện tích của một tấm kính hình vuông là ... m vuông?Người ta dùng các tấm kính hình vuông cạnh 1 phần 4 m lắp sát nhau thành một vách ngăn hình chữ nhật có chiều dài 5 m và chiều rộng 4 m. Diện tích của một tấm kính hình vuông là ... m vuông?",
             "imagePath": "",
             "correctAnswer": "1 phần 16",
             "isMultipleChoice": true,
@@ -662,8 +662,8 @@
             "correctAnswer": "36",
             "isMultipleChoice": true,
             "choices": [
-                "36",
-                "20",
+                "3636",
+                "2020",
                 "48",
                 "36/48"
             ],
@@ -1190,7 +1190,7 @@
             "difficulty": 2
         },
         {
-            "questionText": "Điểm số môn Tiếng Việt của Y Moan là 8,25. Làm tròn số này đến hàng đơn vị thì điểm số môn Tiếng Việt của Y Moan là:",
+            "questionText": "Điểm số môn Tiếng Việt của Y Moan là 8,25. Làm tròn số này đến hàng đơn vị thì điểm số môn Tiếng Việt của Y Moan là:Điểm số môn Tiếng Việt của Y Moan là 8,25. Làm tròn số này đến hàng đơn vị thì điểm số môn Tiếng Việt của Y Moan là:",
             "imagePath": "",
             "correctAnswer": "8",
             "isMultipleChoice": true,
@@ -1274,7 +1274,7 @@
             "difficulty": 2
         },
         {
-            "questionText": "345 cm dưới dạng số thập phân có đơn vị đo là mét. Viết là ... mét",
+            "questionText": "345 cm dưới dạng số thập phân có đơn vị đo là mét. Viết là ... mét345 cm dưới dạng số thập phân có đơn vị đo là mét. Viết là ... mét",
             "imagePath": "",
             "correctAnswer": "3,45",
             "isMultipleChoice": false,
@@ -1430,7 +1430,7 @@
             "difficulty": 2
         },
         {
-            "questionText": "Đặt tính rồi tính: 80,6 : 26 = ?",
+            "questionText": "Đặt tính rồi tính: 80,6 : 26 = ?Đặt tính rồi tính: 80,6 : 26 = ?",
             "imagePath": "",
             "correctAnswer": "3,1",
             "isMultipleChoice": true,

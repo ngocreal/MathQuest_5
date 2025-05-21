@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fcc753a48b7a665489941eb84d0c6d2f, type: 3}
-  m_Name: Quest_07
+  m_Name: Quest_33
   m_EditorClassIdentifier: 
-  questionText: "17 \xD7 (730 + 270) = ?"
+  questionText: "T\xEDnh nh\u1EA9m: 2,82 \xD7 1 000 = ?"
   imagePath: 
-  correctAnswer: 17000
+  correctAnswer: 2820
   isMultipleChoice: 1
   choices:
-  - 17000
-  - 15404
-  - 13104
-  - 12680
-  difficulty: 2
-  pointsReward: 25
+  - 2820
+  - 28020
+  - 28200
+  - 2820200
+  difficulty: 1
+  pointsReward: 5

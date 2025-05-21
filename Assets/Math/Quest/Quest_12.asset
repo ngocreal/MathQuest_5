@@ -12,14 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcc753a48b7a665489941eb84d0c6d2f, type: 3}
   m_Name: Quest_12
   m_EditorClassIdentifier: 
-  questionText: "Ph\xE2n s\u1ED1 c\u1EE7a H\xECnh 2 vi\u1EBFt l\xE0"
-  imagePath: Image/c2_phanso_1
-  correctAnswer: 2/3
+  questionText: "Ng\u01B0\u1EDDi ta d\xF9ng c\xE1c t\u1EA5m k\xEDnh h\xECnh vu\xF4ng
+    c\u1EA1nh 1 ph\u1EA7n 4 m l\u1EAFp s\xE1t nhau th\xE0nh m\u1ED9t v\xE1ch ng\u0103n
+    h\xECnh ch\u1EEF nh\u1EADt c\xF3 chi\u1EC1u d\xE0i 5 m v\xE0 chi\u1EC1u r\u1ED9ng
+    4 m. Di\u1EC7n t\xEDch c\u1EE7a m\u1ED9t t\u1EA5m k\xEDnh h\xECnh vu\xF4ng l\xE0
+    ... m vu\xF4ng?"
+  imagePath: 
+  correctAnswer: "1 ph\u1EA7n 16"
   isMultipleChoice: 1
   choices:
-  - 2/3
-  - 2/4
-  - 3/4
-  - 3/2
+  - "1 ph\u1EA7n 16"
+  - "2 ph\u1EA7n 4"
+  - "5 ph\u1EA7n 12"
+  - "11 ph\u1EA7n 2"
   difficulty: 1
   pointsReward: 5

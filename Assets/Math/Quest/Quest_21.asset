@@ -10,16 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fcc753a48b7a665489941eb84d0c6d2f, type: 3}
-  m_Name: Quest_07
+  m_Name: Quest_21
   m_EditorClassIdentifier: 
-  questionText: "17 \xD7 (730 + 270) = ?"
+  questionText: "M\u1ED7i b\u01B0\u1EDBc nh\u1EA3y c\u1EE7a m\u1ED9t con th\u1ECF
+    \u0111\u01B0\u1EE3c 0,52 m. H\u1ECFi con th\u1ECF \u0111\xF3 nh\u1EA3y bao nhi\xEAu
+    b\u01B0\u1EDBc \u0111\u1EC3 di chuy\u1EC3n h\u1EBFt qu\xE3ng \u0111\u01B0\u1EDDng
+    7,8 m?"
   imagePath: 
-  correctAnswer: 17000
+  correctAnswer: "15 b\u01B0\u1EDBc"
   isMultipleChoice: 1
   choices:
-  - 17000
-  - 15404
-  - 13104
-  - 12680
+  - "15 b\u01B0\u1EDBc"
+  - "11 b\u01B0\u1EDBc"
+  - "25 b\u01B0\u1EDBc"
+  - "115 b\u01B0\u1EDBc"
   difficulty: 2
-  pointsReward: 25
+  pointsReward: 15

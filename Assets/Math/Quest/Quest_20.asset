@@ -10,16 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fcc753a48b7a665489941eb84d0c6d2f, type: 3}
-  m_Name: Quest_07
+  m_Name: Quest_20
   m_EditorClassIdentifier: 
-  questionText: "17 \xD7 (730 + 270) = ?"
+  questionText: "T\xEDnh di\u1EC7n t\xEDch h\xECnh tam gi\xE1c c\xF3 \u0111\u1ED9
+    d\xE0i \u0111\xE1y l\xE0 a = 1/2 cm v\xE0 chi\u1EC1u cao l\xE0 h = 4/5 cm."
   imagePath: 
-  correctAnswer: 17000
+  correctAnswer: 1/5 cm2
   isMultipleChoice: 1
   choices:
-  - 17000
-  - 15404
-  - 13104
-  - 12680
+  - 1/5 cm2
+  - 1/5 cm
+  - 1,50 cm
+  - 1,5 cm2
   difficulty: 2
-  pointsReward: 25
+  pointsReward: 15

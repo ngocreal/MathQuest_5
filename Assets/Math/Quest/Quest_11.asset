@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcc753a48b7a665489941eb84d0c6d2f, type: 3}
   m_Name: Quest_11
   m_EditorClassIdentifier: 
-  questionText: "\u0110\u1EB7t t\xEDnh r\u1ED3i t\xEDnh"
-  imagePath: Image/c1_dattinhroitinh_1
+  questionText: "\u0110\u1EB7t t\xEDnh r\u1ED3i t\xEDnh: 157496 + 333333"
+  imagePath: 
   correctAnswer: 490829
   isMultipleChoice: 1
   choices:
   - 490829
   - 490820
-  - 400820
+  - 409820
   - 407820
   difficulty: 2
   pointsReward: 15

@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcc753a48b7a665489941eb84d0c6d2f, type: 3}
   m_Name: Quest_14
   m_EditorClassIdentifier: 
-  questionText: "D\xF9ng ph\xE9p t\xEDnh g\xEC?"
-  imagePath: Image/c3_quydong_1
+  questionText: "Quy \u0111\u1ED3ng d\xF9ng ph\xE9p t\xEDnh g\xEC?"
+  imagePath: 
   correctAnswer: '*'
   isMultipleChoice: 1
   choices:

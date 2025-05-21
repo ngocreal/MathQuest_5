@@ -10,16 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fcc753a48b7a665489941eb84d0c6d2f, type: 3}
-  m_Name: Quest_07
+  m_Name: Quest_25
   m_EditorClassIdentifier: 
-  questionText: "17 \xD7 (730 + 270) = ?"
+  questionText: "L\xE0m 4 c\xE1i b\xE1nh nh\u01B0 nhau h\u1EBFt 1 kg b\u1ED9t. H\u1ECFi
+    l\xE0m 6 c\xE1i b\xE1nh nh\u01B0 th\u1EBF h\u1EBFt bao nhi\xEAu ki-l\xF4-gam
+    b\u1ED9t?"
   imagePath: 
-  correctAnswer: 17000
+  correctAnswer: 1,5 kg
   isMultipleChoice: 1
   choices:
-  - 17000
-  - 15404
-  - 13104
-  - 12680
+  - 4,31 kg
+  - 1,5 kg
+  - 1,25 kg
+  - 4,2 kg
   difficulty: 2
-  pointsReward: 25
+  pointsReward: 15

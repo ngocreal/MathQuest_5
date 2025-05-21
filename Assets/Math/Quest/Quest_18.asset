@@ -10,16 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fcc753a48b7a665489941eb84d0c6d2f, type: 3}
-  m_Name: Quest_07
+  m_Name: Quest_18
   m_EditorClassIdentifier: 
-  questionText: "17 \xD7 (730 + 270) = ?"
+  questionText: "S\u1ED1 xe \u0111\u1EA1p b\u1EB1ng 3/2 s\u1ED1 xe m\xE1y. T\u1EC9
+    s\u1ED1 c\u1EE7a s\u1ED1 xe \u0111\u1EA1p v\xE0 s\u1ED1 xe m\xE1y l\xE0 ?/?"
   imagePath: 
-  correctAnswer: 17000
+  correctAnswer: 3/2
   isMultipleChoice: 1
   choices:
-  - 17000
-  - 15404
-  - 13104
-  - 12680
-  difficulty: 2
-  pointsReward: 25
+  - 3/23/2
+  - 3/2
+  - 3/4
+  - 2/3
+  difficulty: 1
+  pointsReward: 5

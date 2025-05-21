@@ -12,14 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcc753a48b7a665489941eb84d0c6d2f, type: 3}
   m_Name: Quest_09
   m_EditorClassIdentifier: 
-  questionText: 
-  imagePath: Image/c47_bk_1
-  correctAnswer: 3,6
+  questionText: "T\xFA c\xF3 120 000 \u0111\u1ED3ng, T\xFA mua 1 h\u1ED9p b\xFAt
+    c\xF3 gi\xE1 30 000 \u0111\u1ED3ng. S\u1ED1 ti\u1EC1n c\xF2n l\u1EA1i v\u1EEBa
+    \u0111\u1EE7 \u0111\u1EC3 T\xFA mua 12 quy\u1EC3n v\u1EDF c\xF9ng lo\u1EA1i.
+    M\u1ED7i quy\u1EC3n v\u1EDF T\xFA mua c\xF3 gi\xE1 .?. \u0111\u1ED3ng."
+  imagePath: 
+  correctAnswer: 7500
   isMultipleChoice: 1
   choices:
-  - 3,6
-  - 14,4
-  - 3,1
+  - 7500
+  - 7700
+  - 90000
   - 49,4
   difficulty: 3
   pointsReward: 25

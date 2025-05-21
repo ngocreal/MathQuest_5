@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fcc753a48b7a665489941eb84d0c6d2f, type: 3}
-  m_Name: Quest_07
+  m_Name: Quest_50
   m_EditorClassIdentifier: 
-  questionText: "17 \xD7 (730 + 270) = ?"
+  questionText: "Ch\u1ECDn >, <, = \u0111i\u1EC1n v\xE0o 8,91 .?. 08,910"
   imagePath: 
-  correctAnswer: 17000
+  correctAnswer: =
   isMultipleChoice: 1
   choices:
-  - 17000
-  - 15404
-  - 13104
-  - 12680
-  difficulty: 2
-  pointsReward: 25
+  - =
+  - '>'
+  - <
+  - '><'
+  difficulty: 1
+  pointsReward: 5

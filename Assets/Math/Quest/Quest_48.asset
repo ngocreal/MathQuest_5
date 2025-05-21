@@ -10,16 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fcc753a48b7a665489941eb84d0c6d2f, type: 3}
-  m_Name: Quest_07
+  m_Name: Quest_48
   m_EditorClassIdentifier: 
-  questionText: "17 \xD7 (730 + 270) = ?"
+  questionText: "\u0110i\u1EC3m s\u1ED1 m\xF4n Ti\u1EBFng Vi\u1EC7t c\u1EE7a Y Moan
+    l\xE0 8,25. L\xE0m tr\xF2n s\u1ED1 n\xE0y \u0111\u1EBFn h\xE0ng \u0111\u01A1n
+    v\u1ECB th\xEC \u0111i\u1EC3m s\u1ED1 m\xF4n Ti\u1EBFng Vi\u1EC7t c\u1EE7a Y
+    Moan l\xE0:"
   imagePath: 
-  correctAnswer: 17000
+  correctAnswer: 8
   isMultipleChoice: 1
   choices:
-  - 17000
-  - 15404
-  - 13104
-  - 12680
-  difficulty: 2
-  pointsReward: 25
+  - 7
+  - 3
+  - 8
+  - 97
+  difficulty: 1
+  pointsReward: 5

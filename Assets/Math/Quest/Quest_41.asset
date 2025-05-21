@@ -10,16 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fcc753a48b7a665489941eb84d0c6d2f, type: 3}
-  m_Name: Quest_07
+  m_Name: Quest_41
   m_EditorClassIdentifier: 
-  questionText: "17 \xD7 (730 + 270) = ?"
+  questionText: "14 t\u1EA1; 72 y\u1EBFn; 5 kg d\u01B0\u1EDBi d\u1EA1ng s\u1ED1 th\u1EADp
+    ph\xE2n c\xF3 \u0111\u01A1n v\u1ECB \u0111o l\xE0 t\u1EA5n. Vi\u1EBFt l\xE0 ...
+    t\u1EA5n"
   imagePath: 
-  correctAnswer: 17000
+  correctAnswer: 1,4
   isMultipleChoice: 1
   choices:
-  - 17000
-  - 15404
-  - 13104
-  - 12680
+  - 1,4
+  - 1,41
+  - 13,4
+  - 11,4
   difficulty: 2
-  pointsReward: 25
+  pointsReward: 15

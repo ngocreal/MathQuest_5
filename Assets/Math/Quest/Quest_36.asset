@@ -10,16 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fcc753a48b7a665489941eb84d0c6d2f, type: 3}
-  m_Name: Quest_07
+  m_Name: Quest_36
   m_EditorClassIdentifier: 
-  questionText: "17 \xD7 (730 + 270) = ?"
+  questionText: "M\u1ED7i gi\u1EDD xe m\xE1y \u0111i \u0111\u01B0\u1EE3c 30,5 km.
+    H\u1ECFi trong 3 gi\u1EDD xe m\xE1y \u0111\xF3 \u0111i \u0111\u01B0\u1EE3c bao
+    nhi\xEAu ki-l\xF4-m\xE9t?"
   imagePath: 
-  correctAnswer: 17000
+  correctAnswer: 91,5
   isMultipleChoice: 1
   choices:
-  - 17000
-  - 15404
-  - 13104
-  - 12680
-  difficulty: 2
+  - 91,5
+  - 1875
+  - 1,255
+  - 25,750
+  difficulty: 3
   pointsReward: 25
