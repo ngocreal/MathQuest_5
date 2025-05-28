@@ -6,13 +6,11 @@ public class GameManager : MonoBehaviour
     public QuestDatabase questionDatabase;
     public MathQuestionSystem questionSystem;
 
+    private bool hasWarnedMissingSystem = false;
+
     private void Awake()
     {
-        if (Instance != null && Instance != this)
-        {
-            Destroy(gameObject);
-        }
-        else
+        if (Instance == null)
         {
             Instance = this;
             if (transform.parent == null)
@@ -26,18 +24,40 @@ public class GameManager : MonoBehaviour
                 DontDestroyOnLoad(gameObject);
             }
         }
+        else if (Instance != this)
+        {
+            Debug.LogWarning("GameManager khác đã tồn tại, tiêu diệt bản sao.");
+            Destroy(gameObject);
+            return;
+        }
 
-        // tự động gán questionSystem nếu chưa có
+        // Tự động gán questionSystem nếu chưa có
+        AssignQuestionSystem();
+    }
+
+    private void Update()
+    {
+        // Thử gán lại questionSystem nếu chưa có
+        if (questionSystem == null && !hasWarnedMissingSystem)
+        {
+            AssignQuestionSystem();
+        }
+    }
+
+    private void AssignQuestionSystem()
+    {
         if (questionSystem == null)
         {
             questionSystem = FindFirstObjectByType<MathQuestionSystem>();
             if (questionSystem == null)
             {
-                Debug.LogError("Không tìm thấy MathQuestionSystem trong scene!");
+                Debug.LogWarning("Không tìm thấy MathQuestionSystem trong scene! Sẽ thử lại trong Update.");
+                hasWarnedMissingSystem = true;
             }
             else
             {
                 Debug.Log("Đã tự động gán MathQuestionSystem cho GameManager.");
+                hasWarnedMissingSystem = false;
             }
         }
     }
@@ -46,23 +66,20 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log($"TriggerQuestion gọi cho: {triggerObject.tag}");
 
-        // kiểm tra null
+        // Kiểm tra null
         if (questionSystem == null)
         {
             Debug.LogError("questionSystem chưa được gán! Không thể cộng điểm.");
             return;
         }
 
-        int difficulty = 1;
         if (triggerObject.CompareTag("enemy"))
         {
-            difficulty = 2;
-            Debug.Log("giết quái +4 điểm");
+            Debug.Log("Giết quái +4 điểm");
             questionSystem.AddPoints(4);
         }
         else if (triggerObject.CompareTag("Vang"))
         {
-            difficulty = 1;
             Debug.Log("+1 điểm cho Vang");
             questionSystem.AddPoints(1);
         }
