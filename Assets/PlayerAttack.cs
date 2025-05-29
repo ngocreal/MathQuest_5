@@ -11,6 +11,8 @@ public class PlayerAttack : MonoBehaviour
     public float attackRange;
     public int damage;
 
+    public GameObject boss;
+
     void Update()
     {
         if (timeBtwAttack <= 0)

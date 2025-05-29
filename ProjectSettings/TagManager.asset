@@ -9,6 +9,8 @@ TagManager:
   - Vang
   - Chest
   - enemy
+  - Bee
+  - Boss
   - FallDetector
   - UI
   layers:
@@ -22,7 +24,7 @@ TagManager:
   - San
   - Ladder
   - enemy
-  - 
+  - Boss
   - bg
   - effect
   - 

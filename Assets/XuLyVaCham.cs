@@ -25,6 +25,7 @@ public class XuLyVaCham : MonoBehaviour
     {
         if (isAnsweringQuestion) return;
         Debug.Log($"Va chạm với: {collision.tag}");
+
         if (collision.CompareTag("Vang"))
         {
             Star++;
@@ -40,7 +41,7 @@ public class XuLyVaCham : MonoBehaviour
                 Debug.LogError("GameManager.Instance is null!");
             }
         }
-        else if (collision.CompareTag("GaiNhon") || collision.CompareTag("enemy"))
+        else if (collision.CompareTag("GaiNhon") || collision.CompareTag("enemy") || collision.CompareTag("Boss"))
         {
             Hp--;
             heartText.SetText(Hp.ToString());
@@ -57,6 +58,7 @@ public class XuLyVaCham : MonoBehaviour
             }
         }
     }
+
 
     public void RestoreHealth(int amount)
     {

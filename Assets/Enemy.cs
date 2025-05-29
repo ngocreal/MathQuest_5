@@ -2,18 +2,21 @@
 
 public class Enemy : MonoBehaviour
 {
-    //Dừng xóa hay chỉnh sửa code trong XuLyVaCham.cs và cái Enemy.cs lần trước bà sửa sao cái nó chạy éo được luôn sửa lại thì cũng éo chạy nếu bà muốn thêm cái gì
-    //thì tạo Cs khác rồi chat hỏi kết nối mà không làm thay đổi cái cs này.
-
     [SerializeField] private float speed = 1f;
     public Transform leftPoint, rightPoint;
     private bool movingRight = true;
+
+    public DoorController doorController;
+    public string enemyName = "Bee";
+
+
 
     public int health = 3; // Thêm thuộc tính máu
 
     void Start()
     {
         transform.position = leftPoint.position;
+        Debug.Log("Enemy " + gameObject.name + " is alive with HP: " + health);
     }
 
     void Update()
@@ -59,5 +62,24 @@ public class Enemy : MonoBehaviour
     {
         health -= damage;
         Debug.Log("Enemy took " + damage + " damage. Current health: " + health);
+
+        if (health <= 0)
+        {
+            Die();
+        }
+
     }
+
+    void Die()
+    {
+        Debug.Log(enemyName + " đã chết.");
+
+        if (enemyName == "Bee" && doorController != null)
+        {
+            doorController.OpenDoorIfBee();
+        }
+
+        Destroy(gameObject);
+    }
+
 }

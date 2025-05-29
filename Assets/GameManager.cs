@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour
     public QuestDatabase questionDatabase;
     public MathQuestionSystem questionSystem;
 
+
     private bool hasWarnedMissingSystem = false;
 
     private void Awake()
@@ -78,10 +79,13 @@ public class GameManager : MonoBehaviour
             Debug.Log("Giết quái +4 điểm");
             questionSystem.AddPoints(4);
         }
+
         else if (triggerObject.CompareTag("Vang"))
         {
             Debug.Log("+1 điểm cho Vang");
             questionSystem.AddPoints(1);
         }
     }
+
+
 }
