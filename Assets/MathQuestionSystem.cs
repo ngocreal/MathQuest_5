@@ -52,39 +52,39 @@ public class MathQuestionSystem : MonoBehaviour
             case "Màn 1":
                 currentLevelName = "Màn 1";
                 break;
-            case "Level2":
+            case "Level_2":
             case "Màn 2":
                 currentLevelName = "Màn 2";
                 break;
-            case "Level3":
+            case "Level_3":
             case "Màn 3":
                 currentLevelName = "Màn 3";
                 break;
-            case "Level4":
+            case "Level_4":
             case "Màn 4":
                 currentLevelName = "Màn 4";
                 break;
-            case "Level5":
+            case "Level_5":
             case "Màn 5":
                 currentLevelName = "Màn 5";
                 break;
-            case "Level6":
+            case "Level_6":
             case "Màn 6":
                 currentLevelName = "Màn 6";
                 break;
-            case "Level7":
+            case "Level_7":
             case "Màn 7":
                 currentLevelName = "Màn 7";
                 break;
-            case "Level8":
+            case "Level_8":
             case "Màn 8":
                 currentLevelName = "Màn 8";
                 break;
-            case "Level9":
+            case "Level_9":
             case "Màn 9":
                 currentLevelName = "Màn 9";
                 break;
-            case "Level10":
+            case "Level_10":
             case "Màn 10":
                 currentLevelName = "Màn 10";
                 break;
@@ -197,6 +197,7 @@ public class MathQuestionSystem : MonoBehaviour
 
         if (isCorrect)
         {
+            SoundEffectManager.Play("Correct");
             int reward = 2;
             currentPlayerPoints += reward;
             if (player != null && player.StarText != null)
@@ -223,11 +224,14 @@ public class MathQuestionSystem : MonoBehaviour
             }
             SaveAnswerResult(currentLevelName, isCorrect);
             Debug.Log($"Số câu đúng {currentLevelName}_Correct: {PlayerPrefs.GetInt(currentLevelName + "_Correct", 0)}");
+
+            GiveRewardItem();
         }
         else
         {
             if (player != null)
             {
+                SoundEffectManager.Play("InCorrect");
                 player.Hp--;
                 if (player.heartText != null)
                 {

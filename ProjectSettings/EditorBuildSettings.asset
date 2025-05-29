@@ -5,9 +5,6 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/karsiori/Scenes/SampleScene - Woods Tileset and Background.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: 233cb7deb53520b46972748c5889164f
@@ -25,7 +22,7 @@ EditorBuildSettings:
     guid: 5c686518e8d9cc54a9b743531106c897
   - enabled: 1
     path: Assets/Scenes/Level_5.unity
-    guid: cb8194f1ed4a7554e997f63ddd2afecc
+    guid: 82799e623b2f70c45b627c1659956155
   - enabled: 1
     path: Assets/Scenes/Level_6.unity
     guid: a563305b28c51884f94c8717bb3f94bd
@@ -37,7 +34,7 @@ EditorBuildSettings:
     guid: b58d01ef07130ac4097b00b83e764553
   - enabled: 1
     path: Assets/Scenes/Level_9.unity
-    guid: 72ae4f0cd9239554a84e9ef78c5f1e03
+    guid: b48a9225334d9bc49b308b832f32558a
   - enabled: 1
     path: Assets/Scenes/Level_10.unity
     guid: 3e5364f2540ba434caad184484bf7a8a
